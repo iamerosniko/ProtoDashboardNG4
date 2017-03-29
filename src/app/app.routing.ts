@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SyncParentComponent } from './synchronization/sync.parent.component';
+import { SyncParentComponent } from './components/synchronization/sync.parent.component';
 
 const appRoutes: Routes = [
     { path: 'sync', component: SyncParentComponent},
