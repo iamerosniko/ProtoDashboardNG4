@@ -7,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-//import { AboutComponent } from './about.component';
+var sync_parent_component_1 = require("./synchronization/sync.parent.component");
 var appRoutes = [
-    //{ path: 'about', component: AboutComponent},
+    { path: 'sync', component: sync_parent_component_1.SyncParentComponent },
     { path: '', redirectTo: 'project-tracker', pathMatch: 'full' }
 ];
 var AppRouting = (function () {
