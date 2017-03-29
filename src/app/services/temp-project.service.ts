@@ -2,45 +2,41 @@ import 'rxjs/add/operator/toPromise';
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 //import { UUID } from 'angular2-uuid';
-//import { Project } from './project';
-import { Tempproject } from '../entities/tempproject';
+import { TempProject } from '../entities/tempproject';
 @Injectable()
-export class BtssService {
+export class TempProjectService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private apiUrl = 'api/BTSSProjects';  
-
+    private apiUrl = 'api/TempProjects';  
+    
     constructor(private http: Http){}
 
-    getProjects(): Promise<Tempproject[]> {
+    getProjects(): Promise<TempProject[]> {
         return this.http
                 .get(this.apiUrl, {headers: this.headers})
                 .toPromise()
-                .then(response => response.json().data as Tempproject[]) //testing
-                //.then(response => response.json())  // live
+                .then(response => response.json())
                 .catch(this.handleError);
     }
 
-    getProject(id: string): Promise<Tempproject> {
-        const url = `${this.apiUrl}/?projectID=${id}`;
+    getProject(id: string): Promise<TempProject> {
+        const url = `${this.apiUrl}/${id}`;
         return this.http
                 .get(url)
                 .toPromise()
-                .then(response => response.json().data as Tempproject)  // testing
-                //.then(response => response.json())  // live
+                .then(response => response.json())  
                 .catch(this.handleError);
                  
     }
 
-    postProject(newProject: Tempproject): Promise<Tempproject> {
+    postProject(newProject: TempProject): Promise<TempProject> {
         return this.http
             .post(this.apiUrl, JSON.stringify(newProject), {headers: this.headers})
             .toPromise()
-            .then(res => res.json())  // testing
-            //.then(res => res.json())  // live
+            .then(res => res.json())
             .catch(this.handleError);
     }
 
-    putProject(project: Tempproject): Promise<Tempproject> {
+    putProject(project: TempProject): Promise<TempProject> {
         const url = `${this.apiUrl}/${project.ProjectID}`;
         return this.http
             .put(url, JSON.stringify(project), {headers: this.headers})
@@ -49,16 +45,14 @@ export class BtssService {
             .catch(this.handleError);
     }
     
-    DeleteProject(projectID: string): Promise<void> {
+    DeleteProject(id: string): Promise<void> {
         const url = `${this.apiUrl}/${id}`;
         return this.http
             .delete(url, {headers: this.headers})
             .toPromise()
-            .then(() => null)  // testing
-            //.then(res => res.json())  // live
+            .then(() => null)
             .catch(this.handleError);
     }
-
 
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only
