@@ -1,4 +1,4 @@
-export class tempproject {
+export class Tempproject {
     constructor (
         public ProjectID : string,
         public ProjectName: string,
