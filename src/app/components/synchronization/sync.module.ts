@@ -10,7 +10,7 @@ import { Routes } from '@angular/router';
 // import { TooltipModule } from 'ng2-bootstrap';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
-import { SyncParentComponent } from './sync.parent.component';
+import { SyncMainComponent } from './sync.main.component';
 
 @NgModule({
     imports: [
@@ -24,7 +24,7 @@ import { SyncParentComponent } from './sync.parent.component';
         // Ng2DatetimePickerModule
     ],
     declarations: [
-        SyncParentComponent
+        SyncMainComponent
     ],
     providers: [
     ]

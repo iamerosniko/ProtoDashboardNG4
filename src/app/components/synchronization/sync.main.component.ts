@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'sync-comp',
   template: `<h1>Hello {{name}}</h1>`,
 })
-export class SyncParentComponent  { 
+export class SyncMainComponent  { 
     name = 'Sync page';
 
 }

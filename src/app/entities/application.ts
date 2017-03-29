@@ -13,8 +13,8 @@ export class Application {
         public AppIsActive: Boolean,
         public AppPII: Boolean,
         public AppSecurity : string,
-        public pt_detail_show: boolean,
-        public pt_detail_onhold : Date,
+        public DateImplemented: Date,
+        public LastProdDaAppte : Date,
         public pt_detail_reason : string,
         public pt_detail_progress : number,
         public pt_detail_entrytype : string
