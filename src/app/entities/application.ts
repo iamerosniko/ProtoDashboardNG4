@@ -15,8 +15,13 @@ export class Application {
         public AppSecurity : string,
         public DateImplemented: Date,
         public LastProdDaAppte : Date,
-        public pt_detail_reason : string,
-        public pt_detail_progress : number,
-        public pt_detail_entrytype : string
+        public AppVersion : string,
+        public ProjectID : string,
+        public AppDesc : string,
+        public AppDatasource : string,
+        public AppDatabasename : string,
+        public AppUserID : string,
+        public AppPassword : string,
+        public AppisWeb : Boolean
     ){}
 }
