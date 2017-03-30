@@ -15,11 +15,15 @@ export class FnMain  {
     ){ }
 
     tempProject : TempProject[];
-    //1.from wdsb.temprojects
+//Part 1 : Clear Temporary Table  > wdsb.tempProjects
+    //1.from wdsb.temprojects 
     getTempProjects():TempProject[]{
         var tmpProj:TempProject[];
         this.tempProjectService.getProjects()
-            .then(tp => tmpProj = tp);
+            .then(tp => {
+                tmpProj = tp;
+                //this.deleteProjectsToTempProject(tmpProj); //uncomment if not working as synchronous
+            });
         return tmpProj;
     }
     //2.delete to tempprojects
@@ -28,11 +32,15 @@ export class FnMain  {
             this.tempProjectService.DeleteProject(element.ProjectID);
         });
     }
+//Part 2 : Insert list of applications from btss
     //3.from btss.project to wdsb.tempprojects
     getProjectsFromBTSS():TempProject[]{
         var tmpProj:TempProject[];
         this.btssWdsbService.getProjects()
-            .then(tp => tmpProj = tp);
+            .then(tp => {
+                tmpProj = tp;
+                //this.postProjectsToTempProjects(tmpProj); //uncomment if not working as synchronous
+            });
         return tmpProj;
     }
     //4.add to wdsb.tempprojects
@@ -41,10 +49,16 @@ export class FnMain  {
             this.tempProjectService.postProject(element);
         });
     }
+/*Part 3 : Compare if already exists to wdsb.Applcation
+ * if not exists > ADD 
+ * (use VIEW in MSSQL right outer join + null)
+*/
     //5.Compare wdsb.tempProjects and wdsb.Application
     //TODO : Create a service that gets a resultset of comparison between
     //       wdsb.tempProjects and wdsb.Application
-
+    getNewApplications(){ //:Application[]{
+        //return new Application[];
+    }
     //6.add to wdsb.Applications
     postApplications(app:Application[]){
         (app).forEach(element => {
