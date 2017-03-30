@@ -11,7 +11,12 @@ import { Routes } from '@angular/router';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
 import { SyncMainComponent } from './sync.main.component';
-
+//functions
+import { FnMain } from './functions/fn-main';
+//services
+import { BTSSWDSBService } from '../../services/btss-wdsb.service';
+import { TempProjectService } from '../../services/temp-project.service';
+//import { AppUserService } from '../../services/app-user.service';
 @NgModule({
     imports: [
         CommonModule,
@@ -24,9 +29,12 @@ import { SyncMainComponent } from './sync.main.component';
         // Ng2DatetimePickerModule
     ],
     declarations: [
-        SyncMainComponent
+        SyncMainComponent,
+        FnMain
     ],
     providers: [
+        BTSSWDSBService,
+        TempProjectService
     ]
 })
 

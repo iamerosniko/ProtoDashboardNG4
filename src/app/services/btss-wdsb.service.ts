@@ -5,7 +5,7 @@ import { Headers, Http } from '@angular/http';
 import { TempProject } from '../entities/tempproject';
 
 @Injectable()
-export class BtssWdsbService {
+export class BTSSWDSBService {
     private headers = new Headers({'Content-Type': 'application/json'});
     private BTSSUrl = 'api/BTSSProjects';  
     
