@@ -11,7 +11,7 @@ import { Routes } from '@angular/router';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
 import { SyncMainComponent } from './sync.main.component';
-//functions
+//functions (providers)
 import { FnMain } from './functions/fn-main';
 //services
 import { BTSSWDSBService } from '../../services/btss-wdsb.service';
@@ -30,11 +30,12 @@ import { TempProjectService } from '../../services/temp-project.service';
     ],
     declarations: [
         SyncMainComponent,
-        FnMain
+        
     ],
     providers: [
         BTSSWDSBService,
-        TempProjectService
+        TempProjectService,
+        FnMain
     ]
 })
 

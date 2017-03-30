@@ -9,7 +9,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 //ComponentModules
-var sync_module_1 = require("./synchronization/sync.module");
+var sync_module_1 = require("./components/synchronization/sync.module");
 //routing
 var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
