@@ -24,8 +24,7 @@ export class TempProjectService {
                 .get(url)
                 .toPromise()
                 .then(response => response.json())  
-                .catch(this.handleError);
-                 
+                .catch(this.handleError);      
     }
 
     postProject(newProject: TempProject): Promise<TempProject> {
