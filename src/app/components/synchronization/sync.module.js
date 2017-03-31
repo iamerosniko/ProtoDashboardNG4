@@ -16,12 +16,13 @@ var http_1 = require("@angular/http");
 // import { TooltipModule } from 'ng2-bootstrap';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
-var sync_main_component_1 = require("./sync.main.component");
+var sync_main_component_1 = require("./sync-main.component");
 //functions (providers)
 var fn_main_1 = require("./functions/fn-main");
 //services
 var btss_wdsb_service_1 = require("../../services/btss-wdsb.service");
 var temp_project_service_1 = require("../../services/temp-project.service");
+var application_service_1 = require("../../services/application.service");
 //import { AppUserService } from '../../services/app-user.service';
 var SynchronizationModule = (function () {
     function SynchronizationModule() {
@@ -41,6 +42,7 @@ SynchronizationModule = __decorate([
         providers: [
             btss_wdsb_service_1.BTSSWDSBService,
             temp_project_service_1.TempProjectService,
+            application_service_1.ApplicationService,
             fn_main_1.FnMain
         ]
     })

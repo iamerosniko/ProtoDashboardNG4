@@ -10,12 +10,13 @@ import { Routes } from '@angular/router';
 // import { TooltipModule } from 'ng2-bootstrap';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
-import { SyncMainComponent } from './sync.main.component';
+import { SyncMainComponent } from './sync-main.component';
 //functions (providers)
 import { FnMain } from './functions/fn-main';
 //services
 import { BTSSWDSBService } from '../../services/btss-wdsb.service';
 import { TempProjectService } from '../../services/temp-project.service';
+import { ApplicationService } from '../../services/application.service';
 //import { AppUserService } from '../../services/app-user.service';
 @NgModule({
     imports: [
@@ -35,6 +36,7 @@ import { TempProjectService } from '../../services/temp-project.service';
     providers: [
         BTSSWDSBService,
         TempProjectService,
+        ApplicationService,
         FnMain
     ]
 })
