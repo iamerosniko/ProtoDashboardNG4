@@ -18,6 +18,7 @@ import { BTSSWDSBService } from '../../services/btss-wdsb.service';
 import { TempProjectService } from '../../services/temp-project.service';
 import { ApplicationService } from '../../services/application.service';
 //import { AppUserService } from '../../services/app-user.service';
+import { SyncRouting } from './sync.routing';
 @NgModule({
     imports: [
         CommonModule,
@@ -28,6 +29,7 @@ import { ApplicationService } from '../../services/application.service';
         // TooltipModule.forRoot(),
         // Ng2GoogleChartsModule,
         // Ng2DatetimePickerModule
+        SyncRouting,
     ],
     declarations: [
         SyncMainComponent,

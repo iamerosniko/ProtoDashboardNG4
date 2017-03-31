@@ -5,11 +5,11 @@ import { Application } from '../../entities/application';
 @Component({
     moduleId: module.id,
     selector: 'sync-comp',
-//   template: `<h1>Hello {{name}}</h1>
-//     <a (click)="getSample()" role="button" tooltip="Refresh" class="btn btn-default btn-sm">
-//       <i class="glyphicon glyphicon-refresh"></i>  Refresh
-//     </a>`,
-    templateUrl: 'sync-main.component.html',
+  template: `<h1>Hello {{name}}</h1>
+    <a (click)="getSample()" role="button" tooltip="Refresh" class="btn btn-default btn-sm">
+      <i class="glyphicon glyphicon-refresh"></i>  Refresh
+    </a>`,
+    // templateUrl: 'sync-main.component.html',
 })
 export class SyncMainComponent  { 
     name = 'Sync page';

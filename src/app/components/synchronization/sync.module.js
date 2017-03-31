@@ -24,6 +24,7 @@ var btss_wdsb_service_1 = require("../../services/btss-wdsb.service");
 var temp_project_service_1 = require("../../services/temp-project.service");
 var application_service_1 = require("../../services/application.service");
 //import { AppUserService } from '../../services/app-user.service';
+var sync_routing_1 = require("./sync.routing");
 var SynchronizationModule = (function () {
     function SynchronizationModule() {
     }
@@ -35,6 +36,12 @@ SynchronizationModule = __decorate([
             common_1.CommonModule,
             forms_1.FormsModule,
             http_1.HttpModule,
+            // TabsModule.forRoot(),
+            // ProgressbarModule.forRoot(),
+            // TooltipModule.forRoot(),
+            // Ng2GoogleChartsModule,
+            // Ng2DatetimePickerModule
+            sync_routing_1.SyncRouting,
         ],
         declarations: [
             sync_main_component_1.SyncMainComponent,

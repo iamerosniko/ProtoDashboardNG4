@@ -41,11 +41,7 @@ SyncMainComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'sync-comp',
-        //   template: `<h1>Hello {{name}}</h1>
-        //     <a (click)="getSample()" role="button" tooltip="Refresh" class="btn btn-default btn-sm">
-        //       <i class="glyphicon glyphicon-refresh"></i>  Refresh
-        //     </a>`,
-        templateUrl: 'sync-main.component.html',
+        template: "<h1>Hello {{name}}</h1>\n    <a (click)=\"getSample()\" role=\"button\" tooltip=\"Refresh\" class=\"btn btn-default btn-sm\">\n      <i class=\"glyphicon glyphicon-refresh\"></i>  Refresh\n    </a>",
     }),
     __metadata("design:paramtypes", [fn_main_1.FnMain])
 ], SyncMainComponent);
