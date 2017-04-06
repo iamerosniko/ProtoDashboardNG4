@@ -10,6 +10,14 @@ export class ApplicationService {
     private newAppUrl = 'api/NewApplications';
     constructor(private http: Http){}
 
+    getNewApplications():Promise<Application[]>{
+        return this.http
+                .get(this.newAppUrl, {headers: this.headers})
+                .toPromise()
+                .then(response => response.json())
+                .catch(this.handleError);
+    }
+
     getApplications(): Promise<Application[]> {
         return this.http
                 .get(this.apiUrl, {headers: this.headers})

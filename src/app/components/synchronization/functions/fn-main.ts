@@ -57,10 +57,10 @@ export class FnMain  {
  * (use VIEW in MSSQL right outer join + null)
 */
     //5.Compare wdsb.tempProjects and wdsb.Application
-    //TODO : Create a service that gets a resultset of comparison between
-    //       wdsb.tempProjects and wdsb.Application
-    getNewApplications() : void{ //:Application[]{
-        //return new Application[];
+    getNewApplications() : Application[]{ 
+        var newApp : Application[];
+        this.applicationService.getNewApplications().then(app => newApp = app);
+        return newApp;
     }
     //6.add to wdsb.Applications
     postApplications(app:Application[]): void{
