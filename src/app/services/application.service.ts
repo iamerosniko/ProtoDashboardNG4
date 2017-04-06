@@ -6,8 +6,8 @@ import { Application } from '../entities/application';
 @Injectable()
 export class ApplicationService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private apiUrl = 'api/Applications';  
-    
+    private apiUrl = 'api/Applications';
+    private newAppUrl = 'api/NewApplications';
     constructor(private http: Http){}
 
     getApplications(): Promise<Application[]> {
