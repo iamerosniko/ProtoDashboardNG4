@@ -68,24 +68,34 @@ export class FnMain  {
             this.applicationService.postApplication(element);
         });
     }
-
+/*Part 4 getting users from specific database app
+ *
+ */
     //7.getUsers from WDSB
     getUsersFromWDSB(appID : number):AppUsers[]{
         var appUsers : AppUsers[];
-        this.appuserService.getUsers(appID).then(user => appUsers = user);
+        this.appuserService.getUser(appID).then(user => appUsers = user);
         return appUsers;
     }
 
-
     //8.deleteUsers where app
+    deleteUsers(appUsers:AppUsers[]): void{
+        (appUsers).forEach(element => {
+            this.appuserService.DeleteUser(element.AppUserID);
+        });
+    }
 
-    //8.getUsers from their database/application
+    //9.getUsers from their database/application
     getUsersFromApplications(app:Application) : AppUsers[]{
         var appUsers : AppUsers[];
         this.btssWdsbService.getUsers(app).then(user => appUsers = user);
         return appUsers;
     }
 
-    //9.SaveUsers
-
+    //10.postUsers
+    postUsers(appUsers:AppUsers[]): void{
+        (appUsers).forEach(element => {
+            this.appuserService.postUser(element);
+        });
+    }
 }
