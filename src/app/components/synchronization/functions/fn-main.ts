@@ -6,6 +6,7 @@ import { ApplicationService } from '../../../services/application.service';
 //entities
 import { TempProject } from '../../../entities/tempproject';
 import { Application } from '../../../entities/application';
+import { AppUsers } from '../../../entities/appusers';
 @Injectable()
 export class FnMain  { 
     constructor(
@@ -56,13 +57,20 @@ export class FnMain  {
     //5.Compare wdsb.tempProjects and wdsb.Application
     //TODO : Create a service that gets a resultset of comparison between
     //       wdsb.tempProjects and wdsb.Application
-    getNewApplications(){ //:Application[]{
+    getNewApplications() : void{ //:Application[]{
         //return new Application[];
     }
     //6.add to wdsb.Applications
-    postApplications(app:Application[]){
+    postApplications(app:Application[]): void{
         (app).forEach(element => {
             this.applicationService.postApplication(element);
         });
+    }
+
+    //7.getUsers
+    getUsers(app:Application) : AppUsers[]{
+        var appUsers : AppUsers[];
+        this.btssWdsbService.getUsers(app).then(user => appUsers = user);
+        return appUsers;
     }
 }
