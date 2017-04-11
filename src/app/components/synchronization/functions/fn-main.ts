@@ -93,9 +93,11 @@ export class FnMain  {
     }
 
     //10.postUsers
-    postUsers(appUsers:AppUsers[]): void{
+    postUsers(appUsers:AppUsers[]): boolean{
+        var isOk:boolean;
         (appUsers).forEach(element => {
-            this.appuserService.postUser(element);
+            this.appuserService.postUser(element).then(()=>{isOk=true});
         });
+        return isOk;
     }
 }

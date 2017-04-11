@@ -36,10 +36,11 @@ export class SyncMainComponent  {
     }
     //this method is to get users in every database / applications
     //also saves all users in one repository called wdsb.appusers
-    initAppUserSync(apps:Application[]){
+    initAppUserSync(apps:Application[]):void{
+        var status:boolean[];
         (apps).forEach(app => {
             this.deleteOldUsers(app.AppID); 
-            this.getNewUsers(app);
+            status.push(this.getNewUsers(app)); // gives an status if the 
         });
         //TODO : Get users per database/applications
     }
@@ -48,7 +49,7 @@ export class SyncMainComponent  {
         this.fnMain.deleteUsers(this.fnMain.getUsersFromWDSB(appID));
     }
 
-    getNewUsers(app:Application):void{
-        this.fnMain.postUsers(this.fnMain.getUsersFromApplications(app));
+    getNewUsers(app:Application):boolean{
+        return (this.fnMain.postUsers(this.fnMain.getUsersFromApplications(app)));
     }   
 }
