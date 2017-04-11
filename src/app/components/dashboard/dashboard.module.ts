@@ -25,7 +25,7 @@ import { Routes } from '@angular/router';
 //import { AppUserService } from '../../services/app-user.service';
 
 /*******************Routing**********************************/
-//import { SyncRouting } from './sync.routing';
+import { DashboardRouting } from './dashboard.routing';
 @NgModule({
     imports: [
         CommonModule,
