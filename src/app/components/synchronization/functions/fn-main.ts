@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/toPromise';
 //services
 import { TempProjectService } from '../../../services/temp-project.service';
 import { BTSSWDSBService } from    '../../../services/btss-wdsb.service';
@@ -20,20 +21,18 @@ export class FnMain  {
     tempProject : TempProject[];
 //Part 1 : Clear Temporary Table  > wdsb.tempProjects
     //1.from wdsb.temprojects 
-    getTempProjects():TempProject[]{
+    getTempProjects():Promise<TempProject[]>{
         var tmpProj:TempProject[];
-        this.tempProjectService.getProjects()
-            .then(tp => {
-                tmpProj = tp;
-                //this.deleteProjectsToTempProject(tmpProj); //uncomment if not working as synchronous
-            });
-        return tmpProj;
+        return this.tempProjectService.getProjects();
     }
     //2.delete to tempprojects
     deleteProjectsToTempProject(tp:TempProject[]){
-        (tp).forEach(element => {
-            this.tempProjectService.DeleteProject(element.ProjectID);
-        });
+        // (tp).forEach(element => {
+        //     this.tempProjectService.DeleteProject(element.ProjectID);
+        // });
+        for (let entry of tp) {
+             this.tempProjectService.DeleteProject(entry.ProjectID);
+        }
     }
 //Part 2 : Insert list of applications from btss
     //3.from btss.project to wdsb.tempprojects
@@ -48,9 +47,12 @@ export class FnMain  {
     }
     //4.add to wdsb.tempprojects
     postProjectsToTempProjects(tp:TempProject[]){
-        (tp).forEach(element => {
-            this.tempProjectService.postProject(element);
-        });
+        // (tp).forEach(element => {
+        //     this.tempProjectService.postProject(element);
+        // });
+        for (let entry of tp) {
+             this.tempProjectService.postProject(entry);
+        }
     }
 /*Part 3 : Compare if already exists to wdsb.Applcation
  * if not exists > ADD 

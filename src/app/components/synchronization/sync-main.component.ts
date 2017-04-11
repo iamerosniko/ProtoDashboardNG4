@@ -24,11 +24,15 @@ export class SyncMainComponent implements OnInit  {
 
     initAppSync(){
         //this method is to delete temporary data in wdsb.tempProjects
-        this.fnMain.deleteProjectsToTempProject(this.fnMain.getTempProjects());
-        //this method is to add all applications found in btss to wdsb.tempProjects
-        this.fnMain.postProjectsToTempProjects(this.fnMain.getProjectsFromBTSS());
-        //this method is to check if there's a new applications found in btss
-        this.newApps=this.fnMain.getNewApplications();
+        this.fnMain.getTempProjects()
+            .then(tp=>{
+                this.fnMain.deleteProjectsToTempProject(tp);
+            })
+        /*this method is to add all applications found in btss to wdsb.tempProjects*/
+        //this.fnMain.postProjectsToTempProjects(this.fnMain.getProjectsFromBTSS());
+        
+        /*this method is to check if there's a new applications found in btss*/
+        //this.newApps=this.fnMain.getNewApplications();
     }
 
     saveNewApplications(apps:Application[]){
