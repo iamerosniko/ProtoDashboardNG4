@@ -62,7 +62,6 @@ export class SyncMainComponent implements OnInit  {
             .then(apps =>{
                 this.newApps=apps;console.log('done-getNewAppFromTemp');
             });
-        
     }
 
 
