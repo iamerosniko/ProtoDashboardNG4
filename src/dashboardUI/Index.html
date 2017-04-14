@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Business Technologies Dashboard</title>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="WDStyles/Site.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-blue navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <img alt="Brand" style="float:left;height:20px;width:20px;padding:0px;margin:0px;display:block;position:relative;" src="images/PortalLogo2_Final_small.png"> &nbsp;BizTech Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="Index3.html">Dashboard</a></li>
+                    <li class="active"><a href="Index.html">Applications <span class="sr-only">(current)</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Albert Rick Martires</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="main-content">
+            <!--Header and Breadcrumb-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li class="active">Applications Catalog</li>
+                        </ol>
+                    </div>
+                </div>
+                <h3>Applications Catalog</h3>
+            </div>
+            <!--View Selector and Searchbar-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <div class="btn-group" role="group">
+                                <a href="#" class="btn btn-default btn-md" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Favorite Apps..."><span class="glyphicon glyphicon-star"></span></a>
+                                <a href="#" class="btn btn-default btn-md" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Available for you..."><span class="glyphicon glyphicon-bookmark"></span></a>
+                                <a href="#" class="btn btn-default btn-md" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="All BizTech Apps..."><span class="glyphicon glyphicon-list-alt"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm searchbar" placeholder="Search for apps..."/>
+                    </div>
+                    <div class="col-md-6">
+                         <div class="pull-right">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options&nbsp;<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><span class="glyphicon glyphicon-export"></span>&nbsp;Export App List</a></li>
+                                    <li><a href="Index2.html"><span class="glyphicon glyphicon-th-list"></span>&nbsp;List View</a></li>
+                                    <li><a href="Index.html"><span class="glyphicon glyphicon-th"></span>&nbsp;Grid View</a></li>
+                                    <!--<li role="separator" class="divider"></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <br />
+            <!--Data-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Operations Scorecard">
+                            <div class="thumbnail">    
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Operations Scorecard</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Amy Miskavitch</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right" role="group">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Structured Settlement">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Structured Settlement</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Kristen Flaherty</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Benefits Estimates">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Benefits Estimates</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Kristen Flaherty</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Do-not-call">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Do-not-call</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Brent Morrison</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right" role="group">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Project Plan - Generic">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Project Plan - Generic</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Kara Vopalensky</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Project Plan">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Project Plan</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Melissa Nei</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="SPRNT Tax">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>SPRNT Tax</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Melissa Nei</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="SPRNT Tax Team Balancing">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>SPRNT Tax Team Balancing</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Melissa Nei</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vulnerability Tracker">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Vulnerability Tracker</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> David Rawlings</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Business Technologies Security System">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Business Technologies Security...</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Ken Conway</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="TIN Matching">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>TIN Matching</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Daniel Slawski</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vantage Tax Team Balancing">
+                            <div class="thumbnail">
+                                <img src="images/AppLogo.png" class="thumbnail-img">
+                                <div class="caption">
+                                    <p><strong>Vantage Tax Team Balancing</strong></p>
+                                    <p><span class="glyphicon glyphicon-user"></span> Melissa Nei</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                            <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Pagination-->
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function(){
+                $('[data-toggle="popover"]').popover({container:'body'});   
+            });
+        </script>
+    </body>
+</html>
