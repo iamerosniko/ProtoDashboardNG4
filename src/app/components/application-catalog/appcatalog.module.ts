@@ -13,7 +13,7 @@ import { Routes } from '@angular/router';
 
 /*******************Components**********************************/
 //import { SyncMainComponent } from './sync-main.component';
-
+import { ACComponent } from './ac-parent.component';
 
 /*******************Custom Function Provider**********************************/
 //import { FnMain } from './functions/fn-main';
@@ -40,7 +40,7 @@ import { AppCatalogRouting } from './appcatalog.routing';
     ],
     declarations: [
         //SyncMainComponent,
-        
+        ACComponent
     ],
     providers: [
         // BTSSWDSBService,

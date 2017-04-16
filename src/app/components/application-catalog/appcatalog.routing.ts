@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { ACComponent } from './ac-parent.component';
 //import { SyncMainComponent } from './sync-main.component';
 const syncRoutes: Routes = [
-    //{ path : 'sync' , component : SyncMainComponent }
+    { path : 'Applications' , component : ACComponent }
 ];
 
  @NgModule ({
