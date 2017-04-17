@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
 })
 export class ACComponent  { 
   viewtype:number=0;
-
-  changeView(view:number):void{
-    
-  }
+  
 }
