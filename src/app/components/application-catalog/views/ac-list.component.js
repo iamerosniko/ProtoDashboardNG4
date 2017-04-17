@@ -14,7 +14,7 @@ var ACListComponent = (function () {
 ACListComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-app',
+        selector: 'ac-list',
         templateUrl: "ac-list.component.html"
     })
 ], ACListComponent);

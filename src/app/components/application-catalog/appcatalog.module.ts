@@ -44,7 +44,7 @@ import { AppCatalogRouting } from './appcatalog.routing';
         //SyncMainComponent,
         ACComponent,
         ACListComponent,
-        ACComponent
+        ACGridComponent
     ],
     providers: [
         // BTSSWDSBService,

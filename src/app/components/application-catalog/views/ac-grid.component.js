@@ -14,7 +14,7 @@ var ACGridComponent = (function () {
 ACGridComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-app',
+        selector: 'ac-grid',
         templateUrl: "ac-grid.component.html"
     })
 ], ACGridComponent);

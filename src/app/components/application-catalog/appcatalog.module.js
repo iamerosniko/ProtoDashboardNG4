@@ -18,6 +18,7 @@ var http_1 = require("@angular/http");
 /*******************Components**********************************/
 //import { SyncMainComponent } from './sync-main.component';
 var ac_parent_component_1 = require("./ac-parent.component");
+var ac_grid_component_1 = require("./views/ac-grid.component");
 var ac_list_component_1 = require("./views/ac-list.component");
 /*******************Custom Function Provider**********************************/
 //import { FnMain } from './functions/fn-main';
@@ -50,7 +51,7 @@ AppCatalogModule = __decorate([
             //SyncMainComponent,
             ac_parent_component_1.ACComponent,
             ac_list_component_1.ACListComponent,
-            ac_parent_component_1.ACComponent
+            ac_grid_component_1.ACGridComponent
         ],
         providers: []
     })
