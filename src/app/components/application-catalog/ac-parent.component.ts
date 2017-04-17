@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
   templateUrl:`ac-parent.component.html`
 })
 export class ACComponent  { 
-  
+  viewtype:number=0;
+
+  changeView(view:number):void{
+    
+  }
 }
