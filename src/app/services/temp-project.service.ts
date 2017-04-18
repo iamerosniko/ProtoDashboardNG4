@@ -7,7 +7,7 @@ import { TempProject } from '../entities/tempproject';
 export class TempProjectService {
     private headers = new Headers({'Content-Type': 'application/json'});
     private apiUrl = 'api/TempProjects';  
-    
+    private api2Url = 'api/Projects';
     constructor(private http: Http){}
 
     getProjects(): Promise<TempProject[]> {

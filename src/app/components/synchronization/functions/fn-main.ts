@@ -56,12 +56,12 @@ export class FnMain  {
  * (use VIEW in MSSQL right outer join + null)
 */
     //5.Compare wdsb.tempProjects and wdsb.Application
-    getNewApplications():Promise<Application[]>{ 
+    getNewApplications():Promise<TempProject[]>{ 
         return this.applicationService.getNewApplications();
         
     }
     //6.add to wdsb.Applications
-    postApplications(app:Application[]): void{
+    postApplications(app:TempProject[]): void{
         // (app).forEach(element => {
         //     this.applicationService.postApplication(element);
         // });
