@@ -65,9 +65,7 @@ export class FnMain  {
         // (app).forEach(element => {
         //     this.applicationService.postApplication(element);
         // });
-        for (let entry of app) {
-            this.applicationService.postApplication(entry); 
-        }
+        this.tempProjectService.postProjects2(app); 
     }
 /*Part 4 getting users from specific database app
  *
