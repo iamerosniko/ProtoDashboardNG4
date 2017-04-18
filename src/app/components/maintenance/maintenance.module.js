@@ -9,14 +9,11 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
-// ng2-components
-// import { ProgressbarModule } from 'ng2-bootstrap';
-// import { TabsModule } from 'ng2-bootstrap';
-// import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
-// import { TooltipModule } from 'ng2-bootstrap';
-// import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+// ngx-components
+var ngx_bootstrap_1 = require("ngx-bootstrap");
 //Components
 var sync_main_component_1 = require("./subcomponents/sync-main.component");
+var maintenance_component_1 = require("./maintenance.component");
 //functions (providers)
 var fn_main_1 = require("./functions/fn-main");
 //services
@@ -33,6 +30,7 @@ var MaintenanceModule = (function () {
 MaintenanceModule = __decorate([
     core_1.NgModule({
         imports: [
+            ngx_bootstrap_1.TabsModule.forRoot(),
             common_1.CommonModule,
             forms_1.FormsModule,
             http_1.HttpModule,
@@ -44,6 +42,7 @@ MaintenanceModule = __decorate([
             maintenance_routing_1.MaintenanceRouting,
         ],
         declarations: [
+            maintenance_component_1.MaintenanceComponent,
             sync_main_component_1.SyncMainComponent,
         ],
         providers: [

@@ -3,14 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes } from '@angular/router';
-// ng2-components
-// import { ProgressbarModule } from 'ng2-bootstrap';
-// import { TabsModule } from 'ng2-bootstrap';
-// import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
-// import { TooltipModule } from 'ng2-bootstrap';
-// import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+// ngx-components
+import { TabsModule } from 'ngx-bootstrap';
 //Components
 import { SyncMainComponent } from './subcomponents/sync-main.component';
+import { MaintenanceComponent } from './maintenance.component';
 //functions (providers)
 import { FnMain } from './functions/fn-main';
 //services
@@ -21,6 +18,7 @@ import { AppUserService } from '../../services/app-user.service';
 import { MaintenanceRouting } from './maintenance.routing';
 @NgModule({
     imports: [
+        TabsModule.forRoot(),
         CommonModule,
         FormsModule,
         HttpModule,
@@ -32,6 +30,7 @@ import { MaintenanceRouting } from './maintenance.routing';
         MaintenanceRouting,
     ],
     declarations: [
+        MaintenanceComponent,
         SyncMainComponent,
         
     ],
