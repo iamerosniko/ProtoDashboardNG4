@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SyncMainComponent } from './subcomponents/sync-main.component';
 const syncRoutes: Routes = [
-    { path : 'sync' , component : SyncMainComponent }
+    { path : 'Administrator' , component : SyncMainComponent }
 ];
 
  @NgModule ({
