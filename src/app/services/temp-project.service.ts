@@ -43,6 +43,14 @@ export class TempProjectService {
             .catch(()=>{console.log(false);});
     }
 
+    postProjects2(newProjects: TempProject[]):Promise<string>{
+         return this.http
+            .post(this.api2Url, JSON.stringify(newProjects), {headers: this.headers})
+            .toPromise()
+            .then(response => response.json())
+            .catch(()=>{console.log(false);});
+    }
+
     putProject(project: TempProject): Promise<TempProject> {
         const url = `${this.apiUrl}/${project.ProjectID}`;
         return this.http
