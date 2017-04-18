@@ -7,19 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var sync_main_component_1 = require("./sync-main.component");
+var sync_main_component_1 = require("./subcomponents/sync-main.component");
 var syncRoutes = [
     { path: 'sync', component: sync_main_component_1.SyncMainComponent }
 ];
-var SyncRouting = (function () {
-    function SyncRouting() {
+var MaintenanceRouting = (function () {
+    function MaintenanceRouting() {
     }
-    return SyncRouting;
+    return MaintenanceRouting;
 }());
-SyncRouting = __decorate([
+MaintenanceRouting = __decorate([
     core_1.NgModule({
         imports: [router_1.RouterModule.forChild(syncRoutes)],
         exports: [router_1.RouterModule]
     })
-], SyncRouting);
-exports.SyncRouting = SyncRouting;
+], MaintenanceRouting);
+exports.MaintenanceRouting = MaintenanceRouting;

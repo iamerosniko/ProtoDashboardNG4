@@ -10,7 +10,7 @@ import { Routes } from '@angular/router';
 // import { TooltipModule } from 'ng2-bootstrap';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
-import { SyncMainComponent } from './sync-main.component';
+import { SyncMainComponent } from './subcomponents/sync-main.component';
 //functions (providers)
 import { FnMain } from './functions/fn-main';
 //services
@@ -18,7 +18,7 @@ import { BTSSWDSBService } from '../../services/btss-wdsb.service';
 import { TempProjectService } from '../../services/temp-project.service';
 import { ApplicationService } from '../../services/application.service';
 import { AppUserService } from '../../services/app-user.service';
-import { SyncRouting } from './sync.routing';
+import { MaintenanceRouting } from './maintenance.routing';
 @NgModule({
     imports: [
         CommonModule,
@@ -29,7 +29,7 @@ import { SyncRouting } from './sync.routing';
         // TooltipModule.forRoot(),
         // Ng2GoogleChartsModule,
         // Ng2DatetimePickerModule
-        SyncRouting,
+        MaintenanceRouting,
     ],
     declarations: [
         SyncMainComponent,
@@ -44,4 +44,4 @@ import { SyncRouting } from './sync.routing';
     ]
 })
 
-export class SynchronizationModule {}
+export class MaintenanceModule {}

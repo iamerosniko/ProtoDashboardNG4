@@ -16,7 +16,7 @@ var http_1 = require("@angular/http");
 // import { TooltipModule } from 'ng2-bootstrap';
 // import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 //Components
-var sync_main_component_1 = require("./sync-main.component");
+var sync_main_component_1 = require("./subcomponents/sync-main.component");
 //functions (providers)
 var fn_main_1 = require("./functions/fn-main");
 //services
@@ -24,13 +24,13 @@ var btss_wdsb_service_1 = require("../../services/btss-wdsb.service");
 var temp_project_service_1 = require("../../services/temp-project.service");
 var application_service_1 = require("../../services/application.service");
 var app_user_service_1 = require("../../services/app-user.service");
-var sync_routing_1 = require("./sync.routing");
-var SynchronizationModule = (function () {
-    function SynchronizationModule() {
+var maintenance_routing_1 = require("./maintenance.routing");
+var MaintenanceModule = (function () {
+    function MaintenanceModule() {
     }
-    return SynchronizationModule;
+    return MaintenanceModule;
 }());
-SynchronizationModule = __decorate([
+MaintenanceModule = __decorate([
     core_1.NgModule({
         imports: [
             common_1.CommonModule,
@@ -41,7 +41,7 @@ SynchronizationModule = __decorate([
             // TooltipModule.forRoot(),
             // Ng2GoogleChartsModule,
             // Ng2DatetimePickerModule
-            sync_routing_1.SyncRouting,
+            maintenance_routing_1.MaintenanceRouting,
         ],
         declarations: [
             sync_main_component_1.SyncMainComponent,
@@ -54,5 +54,5 @@ SynchronizationModule = __decorate([
             fn_main_1.FnMain
         ]
     })
-], SynchronizationModule);
-exports.SynchronizationModule = SynchronizationModule;
+], MaintenanceModule);
+exports.MaintenanceModule = MaintenanceModule;

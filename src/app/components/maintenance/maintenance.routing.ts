@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SyncMainComponent } from './sync-main.component';
+import { SyncMainComponent } from './subcomponents/sync-main.component';
 const syncRoutes: Routes = [
     { path : 'sync' , component : SyncMainComponent }
 ];
@@ -11,4 +11,4 @@ const syncRoutes: Routes = [
      exports: [ RouterModule ]
  })
 
-export class SyncRouting {}
+export class MaintenanceRouting {}
