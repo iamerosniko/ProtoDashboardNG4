@@ -71,6 +71,7 @@
                                         <li><a href="#"><span class="glyphicon glyphicon-export"></span>&nbsp;Export App List</a></li>
                                         <li><a href="Index2.html"><span class="glyphicon glyphicon-th-list"></span>&nbsp;List View</a></li>
                                         <li><a href="Index.html"><span class="glyphicon glyphicon-th"></span>&nbsp;Grid View</a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;New Application</a></li>
                                         <!--<li role="separator" class="divider"></li>-->
                                     </ul>
                                 </div>
@@ -79,14 +80,40 @@
                     </div><!--Added-->
                 </div>
                 <hr />
+                <div class="row">
+                    <div class=col-md-12>
+                        <label>Availability Indicators</label>
+                        <div class="btn btn-circle btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></div> Available&nbsp;|&nbsp;
+                        <div class="btn btn-circle btn-warning btn-xs"><span class="glyphicon glyphicon-alert"></span></div> Scheduled Maintenance&nbsp;|&nbsp;
+                        <div class="btn btn-circle btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></div> Unavailable (System Downtime/Ongoing Maintenance)
+                    </div>
+                </div>
             </div>
             <br />
             <!--Data-->
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Operations Scorecard">
-                            <div class="thumbnail">    
+                        <a href="#tmb1" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Operations Scorecard">
+                            <div class="thumbnail" id="tmb1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star1" name="rating1"/><label for="star1" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Operations Scorecard</strong></p>
@@ -104,8 +131,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Structured Settlement">
-                            <div class="thumbnail">
+                        <a href="#tmb2" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Structured Settlement">
+                            <div class="thumbnail" id="tmb2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star2" name="rating2"/><label for="star2" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Structured Settlement</strong></p>
@@ -123,8 +168,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Benefits Estimates">
-                            <div class="thumbnail">
+                        <a href="#tmb3" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Benefits Estimates">
+                            <div class="thumbnail" id="tmb3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star3" name="rating3"/><label for="star3" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Benefits Estimates</strong></p>
@@ -142,8 +205,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Do-not-call">
-                            <div class="thumbnail">
+                        <a href="#tmb4" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Do-not-call">
+                            <div class="thumbnail" id="tmb4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-warning btn-xs">
+                                                    <span class="glyphicon glyphicon-alert"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star4" name="rating4"/><label for="star4" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Do-not-call</strong></p>
@@ -163,8 +244,26 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Project Plan - Generic">
-                            <div class="thumbnail">
+                        <a href="#tmb5" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Project Plan - Generic">
+                            <div class="thumbnail" id="tmb5">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star5" name="rating5"/><label for="star5" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Project Plan - Generic</strong></p>
@@ -182,8 +281,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Project Plan">
-                            <div class="thumbnail">
+                        <a href="#tmb6" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Project Plan">
+                            <div class="thumbnail" id="tmb6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-danger btn-xs">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star6" name="rating6"/><label for="star6" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Project Plan</strong></p>
@@ -201,8 +318,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="SPRNT Tax">
-                            <div class="thumbnail">
+                        <a href="#tmb7" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="SPRNT Tax">
+                            <div class="thumbnail" tmb="tmb7">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star7" name="rating7"/><label for="star7" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>SPRNT Tax</strong></p>
@@ -220,8 +355,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="SPRNT Tax Team Balancing">
-                            <div class="thumbnail">
+                        <a href="#tmb8" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="SPRNT Tax Team Balancing">
+                            <div class="thumbnail" id="tmb8">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-warning btn-xs">
+                                                    <span class="glyphicon glyphicon-alert"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star8" name="rating8"/><label for="star8" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>SPRNT Tax Team Balancing</strong></p>
@@ -241,8 +394,26 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vulnerability Tracker">
-                            <div class="thumbnail">
+                        <a href="#tmb9" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vulnerability Tracker">
+                            <div class="thumbnail" id="tmb9">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star9" name="rating9"/><label for="star9" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Vulnerability Tracker</strong></p>
@@ -260,8 +431,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Business Technologies Security System">
-                            <div class="thumbnail">
+                        <a href="#tmb10" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Business Technologies Security System">
+                            <div class="thumbnail" id="tmb10">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Business Technologies Security...</strong></p>
@@ -279,8 +468,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="TIN Matching">
-                            <div class="thumbnail">
+                        <a href="#tmb11" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="TIN Matching">
+                            <div class="thumbnail" id="tmb11">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star11" name="rating11"/><label for="star11" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>TIN Matching</strong></p>
@@ -298,8 +505,26 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vantage Tax Team Balancing">
-                            <div class="thumbnail">
+                        <a href="#tmb12" class="thumbnail-selector" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vantage Tax Team Balancing">
+                            <div class="thumbnail" id="tmb12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="pull-left">
+                                                <div class="btn btn-circle btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <div class="pull-right">
+                                                <fieldset class="favorite">
+                                                    <input type="checkbox" id="star12" name="rating12"/><label for="star12" title="Mark as Favorite">1 star</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <img src="images/AppLogo.png" class="thumbnail-img">
                                 <div class="caption">
                                     <p><strong>Vantage Tax Team Balancing</strong></p>

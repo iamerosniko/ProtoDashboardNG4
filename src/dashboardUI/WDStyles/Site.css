@@ -66,7 +66,7 @@
     height:120px;
 }
 
-.thumbnail-selector:hover > .thumbnail{
+.thumbnail-selector:hover > .thumbnail {
     background-color: #e3eaf1;
 }
 
@@ -182,4 +182,118 @@ hr {
 
 .carousel-indicators > li {
     border-color:#777;
+}
+
+.btn-favorite {
+    color: #fff;
+    background-color: #c3c458;
+    border-color: #e6e7af;
+}
+
+.btn-favorite:focus,
+.btn-favorite:hover {
+    color: #fff;
+    background-color: #9ea02a;
+    border-color: #7a7c09;
+}
+
+.btn-circle {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding-top:2px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+.favorite {
+    float:left;
+}
+.favorite:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(1,1,1,1);
+}
+.favorite:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:1 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:130%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+.favorite:not(:checked) > label:before {
+    font-family: 'Glyphicons Halflings';
+    content: '\e006';
+}
+.favorite > input:checked ~ label {
+    color: #c3c458;
+    text-shadow:1px 1px #9ea02a, 2px 2px #7a7c09, .1em .1em .2em rgba(0,0,0,.5);
+}
+.favorite:not(:checked) > label:hover,
+.favorite:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    font-family: 'Glyphicons Halflings';
+    content: '\e006';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
 }
