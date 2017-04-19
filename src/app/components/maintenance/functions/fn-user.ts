@@ -16,17 +16,16 @@ export class FnUser  {
 /*Part 1 getting users from specific database app
  */
     //1.getUsers from WDSB
-    getUsersFromWDSB(appID : number):AppUsers[]{
-        var appUsers : AppUsers[];
-        this.appuserService.getUser(appID).then(user => appUsers = user);
-        return appUsers;
+    getUsersFromWDSB(appID : number):Promise<AppUsers[]>{
+        return this.appuserService.getUser(appID);
     }
 
     //2.deleteUsers where app
     deleteUsers(appUsers:AppUsers[]): void{
-        for (let entry of appUsers) {
-            this.appuserService.DeleteUser(entry.AppUserID); 
-        }
+        // for (let entry of appUsers) {
+        //     this.appuserService.DeleteUser(entry.AppUserID); 
+        // }
+        this.appuserService.DeleteUsers(appUsers);
     }
 
     //3.getUsers from their database/application

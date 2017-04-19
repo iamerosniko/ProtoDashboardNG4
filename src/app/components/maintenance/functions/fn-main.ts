@@ -22,7 +22,6 @@ export class FnMain  {
 //Part 1 : Clear Temporary Table  > wdsb.tempProjects
     //1.from wdsb.temprojects 
     getTempProjects():Promise<TempProject[]>{
-        var tmpProj:TempProject[];
         return this.tempProjectService.getProjects();
         //return tmpProj;
     }

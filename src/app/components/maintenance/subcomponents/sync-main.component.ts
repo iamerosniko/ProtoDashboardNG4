@@ -73,20 +73,5 @@ export class SyncMainComponent implements OnInit  {
     }
     //this method is to get users in every database / applications
     //also saves all users in one repository called wdsb.appusers
-    initAppUserSync(apps:Application[]):void{
-        var status:boolean[];
-        (apps).forEach(app => {
-            this.deleteOldUsers(app.AppID); 
-            status.push(this.getNewUsers(app)); // gives an status if the 
-        });
-        //TODO : Get users per database/applications
-    }
-
-    deleteOldUsers(appID: number):void {
-        this.fnMain.deleteUsers(this.fnMain.getUsersFromWDSB(appID));
-    }
-
-    getNewUsers(app:Application):boolean{
-        return (this.fnMain.postUsers(this.fnMain.getUsersFromApplications(app)));
-    }   
+      
 }
