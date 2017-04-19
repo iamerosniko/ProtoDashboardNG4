@@ -10,6 +10,7 @@ import { SyncMainComponent } from './subcomponents/sync-main.component';
 import { MaintenanceComponent } from './maintenance.component';
 //functions (providers)
 import { FnMain } from './functions/fn-main';
+import { FnUser } from './functions/fn-user';
 //services
 import { BTSSWDSBService } from '../../services/btss-wdsb.service';
 import { TempProjectService } from '../../services/temp-project.service';
@@ -39,7 +40,8 @@ import { MaintenanceRouting } from './maintenance.routing';
         TempProjectService,
         ApplicationService,
         AppUserService,
-        FnMain
+        FnMain,
+        FnUser
     ]
 })
 

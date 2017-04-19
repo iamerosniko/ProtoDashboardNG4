@@ -22,7 +22,6 @@ export class FnMain  {
 //Part 1 : Clear Temporary Table  > wdsb.tempProjects
     //1.from wdsb.temprojects 
     getTempProjects():Promise<TempProject[]>{
-        var tmpProj:TempProject[];
         return this.tempProjectService.getProjects();
         //return tmpProj;
     }
@@ -66,43 +65,5 @@ export class FnMain  {
         //     this.applicationService.postApplication(element);
         // });
         this.tempProjectService.postProjects2(app); 
-    }
-/*Part 4 getting users from specific database app
- *
- */
-    //7.getUsers from WDSB
-    getUsersFromWDSB(appID : number):AppUsers[]{
-        var appUsers : AppUsers[];
-        this.appuserService.getUser(appID).then(user => appUsers = user);
-        return appUsers;
-    }
-
-    //8.deleteUsers where app
-    deleteUsers(appUsers:AppUsers[]): void{
-        // (appUsers).forEach(element => {
-        //     this.appuserService.DeleteUser(element.AppUserID);
-        // });
-        for (let entry of appUsers) {
-            this.appuserService.DeleteUser(entry.AppUserID); 
-        }
-    }
-
-    //9.getUsers from their database/application
-    getUsersFromApplications(app:Application) : AppUsers[]{
-        var appUsers : AppUsers[];
-        this.btssWdsbService.getUsers(app).then(user => appUsers = user);
-        return appUsers;
-    }
-
-    //10.postUsers
-    postUsers(appUsers:AppUsers[]): boolean{
-        var isOk:boolean;
-        // (appUsers).forEach(element => {
-        //     this.appuserService.postUser(element).then(()=>{isOk=true});
-        // });
-        for (let entry of appUsers) {
-            this.appuserService.postUser(entry).then(()=>{isOk=true}); 
-        }
-        return isOk;
     }
 }

@@ -17,7 +17,7 @@ export class AppUserService {
                 .then(response => response.json())
                 .catch(this.handleError);
     }
-
+    //get users where appid = ''
     getUser(id: number): Promise<AppUsers[]> {
         const url = `${this.apiUrl}/${id}`;
         return this.http
@@ -48,6 +48,16 @@ export class AppUserService {
         const url = `${this.apiUrl}/${id}`;
         return this.http
             .delete(url, {headers: this.headers})
+            .toPromise()
+            .then(() => null)
+            .catch(this.handleError);
+    }
+    
+    //bulk delete users 
+    DeleteUsers(users:AppUsers[]): Promise<void> {
+        const url = `${this.apiUrl}/DeleteUsers`;
+        return this.http
+            .delete(url, JSON.stringify(users))
             .toPromise()
             .then(() => null)
             .catch(this.handleError);
