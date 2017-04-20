@@ -10,21 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var fn_user_1 = require("./../functions/fn-user");
-var SyncMainComponent = (function () {
-    function SyncMainComponent(fnUser) {
+var SyncUserComponent = (function () {
+    function SyncUserComponent(fnUser) {
         this.fnUser = fnUser;
         this.name = 'Sync page';
-        this.newApps = [];
+        this.projects = [];
     }
-    SyncMainComponent.prototype.ngOnInit = function () {
-        //this.initAppUserSync();
+    SyncUserComponent.prototype.ngOnInit = function () {
+        this.getProjects();
     };
-    SyncMainComponent.prototype.initProjectUserSync = function () {
+    SyncUserComponent.prototype.getProjects = function () {
+        var _this = this;
+        this.fnUser.getProjectsWithBTSSAuthentication()
+            .then(function (projs) { _this.projects = projs; });
+    };
+    SyncUserComponent.prototype.initUserSync = function () {
         this.fnUser.deleteAllUsers();
     };
-    return SyncMainComponent;
+    return SyncUserComponent;
 }());
-SyncMainComponent = __decorate([
+SyncUserComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'sync-comp',
@@ -32,8 +37,8 @@ SyncMainComponent = __decorate([
         //     <a (click)="getSample()" role="button" tooltip="Refresh" class="btn btn-default btn-sm">
         //     <i class="glyphicon glyphicon-refresh"></i>  Refresh
         //     </a>`,
-        templateUrl: 'sync-main.component.html',
+        templateUrl: 'sync-user.component.html',
     }),
     __metadata("design:paramtypes", [fn_user_1.FnUser])
-], SyncMainComponent);
-exports.SyncMainComponent = SyncMainComponent;
+], SyncUserComponent);
+exports.SyncUserComponent = SyncUserComponent;

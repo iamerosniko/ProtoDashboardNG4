@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SyncMainComponent } from './subcomponents/sync-main.component';
+import { SyncUserComponent } from './subcomponents/sync-user.component';
 import { MaintenanceComponent } from './maintenance.component';
 const syncRoutes: Routes = [
-    { path : 'Administrator' , component : MaintenanceComponent }
+    { path : 'Administrator' , component : MaintenanceComponent },
+    { path : 'Users' , component : SyncUserComponent }
 ];
 
  @NgModule ({

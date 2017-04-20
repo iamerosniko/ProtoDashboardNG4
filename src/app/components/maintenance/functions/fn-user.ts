@@ -20,7 +20,7 @@ export class FnUser  {
 /*  Project section */
 /* Get all projects */
     getProjectsWithBTSSAuthentication():Promise<ProjectUsers[]>{
-        return this.projectService.getProjects();
+        return this.projectService.getProjects2();
     }
 
 /*  USER SYNCHRONIZATION section           */

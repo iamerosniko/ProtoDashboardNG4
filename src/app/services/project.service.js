@@ -24,6 +24,14 @@ var ProjectService = (function () {
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
+    ProjectService.prototype.getProjects2 = function () {
+        var url = this.apiUrl + "/GetWDSB_Projects2";
+        return this.http
+            .get(url, { headers: this.headers })
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
     ProjectService.prototype.getProject = function (id) {
         var url = this.apiUrl + "/" + id;
         return this.http

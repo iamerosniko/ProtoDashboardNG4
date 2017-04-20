@@ -10,9 +10,17 @@ export class ProjectService {
     private apiUrl = 'api/Projects';
     constructor(private http: Http){}
 
-    getProjects(): Promise<ProjectUsers[]> {
+    getProjects(): Promise<Project[]> {
         return this.http
                 .get(this.apiUrl, {headers: this.headers})
+                .toPromise()
+                .then(response => response.json())
+                .catch(this.handleError);
+    }
+    getProjects2(): Promise<ProjectUsers[]> {
+        const url = `${this.apiUrl}/GetWDSB_Projects2`;
+        return this.http
+                .get(url, {headers: this.headers})
                 .toPromise()
                 .then(response => response.json())
                 .catch(this.handleError);

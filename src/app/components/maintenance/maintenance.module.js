@@ -13,6 +13,7 @@ var http_1 = require("@angular/http");
 var ngx_bootstrap_1 = require("ngx-bootstrap");
 //Components
 var sync_main_component_1 = require("./subcomponents/sync-main.component");
+var sync_user_component_1 = require("./subcomponents/sync-user.component");
 var maintenance_component_1 = require("./maintenance.component");
 //functions (providers)
 var fn_main_1 = require("./functions/fn-main");
@@ -46,6 +47,7 @@ MaintenanceModule = __decorate([
         declarations: [
             maintenance_component_1.MaintenanceComponent,
             sync_main_component_1.SyncMainComponent,
+            sync_user_component_1.SyncUserComponent,
         ],
         providers: [
             btss_wdsb_service_1.BTSSWDSBService,

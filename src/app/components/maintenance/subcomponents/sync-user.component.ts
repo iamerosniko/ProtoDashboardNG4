@@ -11,7 +11,7 @@ import { ProjectUsers } from '../../../entities/projectusers';
     //     <a (click)="getSample()" role="button" tooltip="Refresh" class="btn btn-default btn-sm">
     //     <i class="glyphicon glyphicon-refresh"></i>  Refresh
     //     </a>`,
-    templateUrl: 'sync-main.component.html',
+    templateUrl: 'sync-user.component.html',
 })
 export class SyncUserComponent implements OnInit  { 
     name = 'Sync page';
@@ -26,7 +26,7 @@ export class SyncUserComponent implements OnInit  {
     
     getProjects():void{
         this.fnUser.getProjectsWithBTSSAuthentication()
-        .then(projs => this.projects = projs)
+        .then(projs => {this.projects = projs;})
     }
 
     initUserSync():void{

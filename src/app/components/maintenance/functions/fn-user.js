@@ -12,11 +12,19 @@ var core_1 = require("@angular/core");
 //services
 var btss_wdsb_service_1 = require("../../../services/btss-wdsb.service");
 var app_user_service_1 = require("../../../services/app-user.service");
+var project_service_1 = require("../../../services/project.service");
 var FnUser = (function () {
-    function FnUser(btssWdsbService, appuserService) {
+    function FnUser(btssWdsbService, appuserService, projectService) {
         this.btssWdsbService = btssWdsbService;
         this.appuserService = appuserService;
+        this.projectService = projectService;
     }
+    /*  Project section */
+    /* Get all projects */
+    FnUser.prototype.getProjectsWithBTSSAuthentication = function () {
+        return this.projectService.getProjects2();
+    };
+    /*  USER SYNCHRONIZATION section           */
     /*Part 1 delete all users before synchronization*/
     FnUser.prototype.deleteAllUsers = function () {
         this.appuserService.DeleteUser();
@@ -33,6 +41,7 @@ var FnUser = (function () {
 FnUser = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [btss_wdsb_service_1.BTSSWDSBService,
-        app_user_service_1.AppUserService])
+        app_user_service_1.AppUserService,
+        project_service_1.ProjectService])
 ], FnUser);
 exports.FnUser = FnUser;
