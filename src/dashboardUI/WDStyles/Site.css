@@ -51,8 +51,14 @@
     background-color: #080808;
 }
 
+body{
+   background: #ecf0f5; 
+}
+
 .main-content {
-    padding-top: 60px;
+    position:absolute;
+    width:100%;
+    padding-top: 60px; 
     background: #ecf0f5;
 }
 
@@ -72,21 +78,6 @@
 
 .breadcrumb {
     background-color: #e3eaf1;
-}
-
-.col-md-6 > input[type="text"].searchbar {
-    width: 50%;
-}
-
-.col-md-12 > input[type="text"].searchbar {
-    width: 25%;
-}
-
-@media (max-width: 767px) { 
-    .col-md-6 > input[type="text"].searchbar,
-    .col-md-12 > input[type="text"].searchbar {
-        width: 100%;
-    }
 }
 
 .popover {
@@ -296,4 +287,41 @@ hr {
     position:relative;
     top:2px;
     left:2px;
+}
+
+.searchbox {
+    position: relative;
+}
+
+.searchbox > input[type=text] {
+    border-radius: 14px;
+    max-width: 100%;
+    padding-right: 25px;
+}
+
+.col-md-6 > .searchbox > input[type="text"] {
+    width: 60%;
+}
+
+.col-md-6 > .searchbox > span {
+    padding-right:240px;
+}
+
+.col-md-12 > .searchbox > input[type="text"] {
+    width: 25%;
+}
+
+@media (max-width: 767px) { 
+    .col-md-6 > .searchbox > input[type="text"],
+    .col-md-12 > .searchbox > input[type="text"] {
+        width: 100%;
+    }
+
+    .col-md-6 > .searchbox > span {
+        padding-right:5px;;
+    }
+}
+
+.table-fixed-body tbody{
+    min-height: 470px;
 }

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Business Technologies Dashboard</title>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="WDStyles/Site.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-blue navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <img alt="Brand" style="float:left;height:20px;width:20px;padding:0px;margin:0px;display:block;position:relative;" src="images/PortalLogo2_Final_small.png"> &nbsp;BizTech Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="Index3.html">Dashboard</a></li>
+                    <li class="active"><a href="Index.html">Applications <span class="sr-only">(current)</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Albert Rick Martires</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <a id="top"></a>
+        <div class="main-content">
+            <!--Header and Breadcrumb-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li class="active">Maintenance</li>
+                        </ol>
+                    </div>
+                </div>
+                <h3>Maintenance</h3>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li role="presentation" class="active">
+                                    <a href="#bu" aria-controls="bu" role="tab" data-toggle="tab">Business Units</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#bucontacts" aria-controls="bucontacts" role="tab" data-toggle="tab">Business Unit Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9 tab-content">
+                            <div class="tab-pane fade in active" id="bu">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="tableBu">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="#createBu" class="btn btn-default btn-md" aria-controls="createBu" role="tab" data-toggle="tab">
+                                                            Create New <span class="glyphicon glyphicon-plus-sign"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <table class="table table-hover table-striped table-fixed-body">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Business Unit Name</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Benefit Administration</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Structured Settlements</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Operations</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Licensing and Commissions</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Thorough Search</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Institutional Annuity Claims</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Retail Death Benefit Administration</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Death Matching</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Disbursement and Inforce Administration</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Annuity Administration</td>
+                                                                    <td><a href="#updateBu" class="btn btn-default btn-sm" aria-controls="updateBu" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div> 
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <ul class="pagination pull-right">
+                                                            <li>
+                                                                <a href="#" aria-label="Previous">
+                                                                    <span aria-hidden="true">&laquo;</span>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="#">1</a></li>
+                                                            <li><a href="#">2</a></li>
+                                                            <li><a href="#">3</a></li>
+                                                            <li><a href="#">4</a></li>
+                                                            <li><a href="#">5</a></li>
+                                                            <li>
+                                                                <a href="#" aria-label="Next">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade"  id="createBu">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">
+                                                        <h4>New Business Unit</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <br />
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <label>Business Unit Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+                                                    <div class="panel-footer">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="btn-group pull-right">
+                                                                    <a class="btn btn-primary btn-md">Save&nbsp;<span class="glyphicon glyphicon-floppy-disk"></span></a>
+                                                                    <a href="#tableBu" class="btn btn-default btn-md" aria-controls="tableBu" role="tab" data-toggle="tab">Go Back</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade"  id="updateBu">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">
+                                                        <h4>Update Information</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <br />
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <label>Business Unit Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+                                                    <div class="panel-footer">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="btn-group pull-right">
+                                                                    <a class="btn btn-primary btn-md">Save&nbsp;<span class="glyphicon glyphicon-floppy-disk"></span></a>
+                                                                    <a href="#tableBu" class="btn btn-default btn-md" aria-controls="tableBu" role="tab" data-toggle="tab">Go Back</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="bucontacts">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="tableBuContact">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="#createBuContact" class="btn btn-default btn-md" aria-controls="createBuContact" role="tab" data-toggle="tab">
+                                                            Create New <span class="glyphicon glyphicon-plus-sign"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <table class="table table-hover table-striped table-fixed-body">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Business Unit Contacts</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Amy Miskavitch</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Michael Petrowski</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Peter Mead</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Melissa Nei</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Brent Morrison</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Austin Mitchel</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Kristen Flaherty</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Sherrie Green</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Kara Vopalensky</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>David Rawlings</td>
+                                                                    <td><a href="#updateBuContact" class="btn btn-default btn-sm" aria-controls="updateBuContact" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div> 
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <ul class="pagination pull-right">
+                                                            <li>
+                                                                <a href="#" aria-label="Previous">
+                                                                    <span aria-hidden="true">&laquo;</span>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="#">1</a></li>
+                                                            <li><a href="#">2</a></li>
+                                                            <li><a href="#">3</a></li>
+                                                            <li><a href="#">4</a></li>
+                                                            <li><a href="#">5</a></li>
+                                                            <li>
+                                                                <a href="#" aria-label="Next">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="createBuContact">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">
+                                                        <h4>New Business Unit</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <br />
+                                                        <div class="row form-group form-horizontal">
+                                                            <div class="col-md-12">
+                                                                <label>First Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                                <br />
+                                                                <label>Middle Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                                <br />
+                                                                <label>Last Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+                                                    <div class="panel-footer">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="btn-group pull-right">
+                                                                    <a class="btn btn-primary btn-md">Save&nbsp;<span class="glyphicon glyphicon-floppy-disk"></span></a>
+                                                                    <a href="#tableBuContact" class="btn btn-default btn-md" aria-controls="tableBuContact" role="tab" data-toggle="tab">Go Back</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="updateBuContact">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">
+                                                        <h4>Update Information</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <br />
+                                                        <div class="row form-group form-horizontal">
+                                                            <div class="col-md-12">
+                                                                <label>First Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                                <br />
+                                                                <label>Middle Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                                <br />
+                                                                <label>Last Name</label>
+                                                                <input type="text" class="form-control input-sm" />
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+                                                    <div class="panel-footer">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="btn-group pull-right">
+                                                                    <a class="btn btn-primary btn-md">Save&nbsp;<span class="glyphicon glyphicon-floppy-disk"></span></a>
+                                                                    <a href="#tableBuContact" class="btn btn-default btn-md" aria-controls="tableBuContact" role="tab" data-toggle="tab">Go Back</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function(){
+                $('[data-toggle="popover"]').popover({container:'body'});   
+            });
+        </script>
+    </body>
+</html>
