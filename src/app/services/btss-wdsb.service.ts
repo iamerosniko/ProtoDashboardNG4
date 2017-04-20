@@ -29,8 +29,8 @@ export class BTSSWDSBService {
                 .catch(this.handleError);
     }
     
-    getUsers(app : Application): Promise<AppUsers[]> {
-        const url = `${this.userURL}/?ds=${app.AppDatasource}&db=${app.AppDatabasename}&appID=${app.AppID}`;
+    getUsers(app : Application): Promise<number> {
+        const url = `${this.userURL}/?ds=${app.AppDatasource}&dbase=${app.AppDatabasename}&appID=${app.AppID}`;
         return this.http
                 .get(url, {headers: this.headers})
                 .toPromise()

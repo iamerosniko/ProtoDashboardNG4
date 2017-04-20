@@ -13,34 +13,16 @@ export class FnUser  {
         private btssWdsbService : BTSSWDSBService,
         private appuserService : AppUserService
     ){ }
-/*Part 1 getting users from specific database app
- */
-    //1.getUsers from WDSB
-    getUsersFromWDSB(appID : number):Promise<AppUsers[]>{
-        return this.appuserService.getUser(appID);
-    }
 
-    //2.deleteUsers where app
-    deleteUsers(appUsers:AppUsers[]): void{
-        // for (let entry of appUsers) {
-        //     this.appuserService.DeleteUser(entry.AppUserID); 
-        // }
-        this.appuserService.DeleteUsers(appUsers);
+/*Part 1 delete all users before synchronization*/
+    deleteAllUsers():void{
+        this.appuserService.DeleteUser();
     }
-
-    //3.getUsers from their database/application
-    getUsersFromApplications(app:Application) : AppUsers[]{
-        var appUsers : AppUsers[];
-        this.btssWdsbService.getUsers(app).then(user => appUsers = user);
-        return appUsers;
-    }
-
-    //4.postUsers
-    postUsers(appUsers:AppUsers[]): boolean{
-        var isOk:boolean;
-        for (let entry of appUsers) {
-            this.appuserService.postUser(entry).then(()=>{isOk=true}); 
-        }
-        return isOk;
+/*Part 2 delete all users before synchronization*/
+    //3.getUsers from their database/application retrieves number of users
+    getUsersFromApplications(app:Application) : number{
+        var result : number;
+        this.btssWdsbService.getUsers(app).then(user => result = user);
+        return result;
     }
 }
