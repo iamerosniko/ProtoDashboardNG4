@@ -16,9 +16,11 @@ var sync_main_component_1 = require("./subcomponents/sync-main.component");
 var maintenance_component_1 = require("./maintenance.component");
 //functions (providers)
 var fn_main_1 = require("./functions/fn-main");
+var fn_user_1 = require("./functions/fn-user");
 //services
 var btss_wdsb_service_1 = require("../../services/btss-wdsb.service");
 var temp_project_service_1 = require("../../services/temp-project.service");
+var project_service_1 = require("../../services/project.service");
 var application_service_1 = require("../../services/application.service");
 var app_user_service_1 = require("../../services/app-user.service");
 var maintenance_routing_1 = require("./maintenance.routing");
@@ -48,9 +50,11 @@ MaintenanceModule = __decorate([
         providers: [
             btss_wdsb_service_1.BTSSWDSBService,
             temp_project_service_1.TempProjectService,
+            project_service_1.ProjectService,
             application_service_1.ApplicationService,
             app_user_service_1.AppUserService,
-            fn_main_1.FnMain
+            fn_main_1.FnMain,
+            fn_user_1.FnUser
         ]
     })
 ], MaintenanceModule);

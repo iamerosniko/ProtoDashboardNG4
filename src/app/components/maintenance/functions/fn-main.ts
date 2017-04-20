@@ -6,7 +6,7 @@ import { BTSSWDSBService } from    '../../../services/btss-wdsb.service';
 import { ApplicationService } from '../../../services/application.service';
 import { AppUserService } from '../../../services/app-user.service';
 //entities
-import { TempProject } from '../../../entities/tempproject';
+import { Project } from '../../../entities/project';
 import { Application } from '../../../entities/application';
 import { AppUsers } from '../../../entities/appusers';
 @Injectable()
@@ -18,15 +18,15 @@ export class FnMain  {
         private appuserService : AppUserService
     ){ }
 
-    tempProject : TempProject[];
+    tempProject : Project[];
 //Part 1 : Clear Temporary Table  > wdsb.tempProjects
     //1.from wdsb.temprojects 
-    getTempProjects():Promise<TempProject[]>{
+    getTempProjects():Promise<Project[]>{
         return this.tempProjectService.getProjects();
         //return tmpProj;
     }
     //2.delete to tempprojects
-    deleteProjectsToTempProject(tp:TempProject[]){
+    deleteProjectsToTempProject(tp:Project[]){
         // (tp).forEach(element => {
         //     this.tempProjectService.DeleteProject(element.ProjectID);
         // });
@@ -36,12 +36,12 @@ export class FnMain  {
     }
 //Part 2 : Insert list of applications from btss
     //3.from btss.project to wdsb.tempprojects
-    getProjectsFromBTSS():Promise<TempProject[]>{
-        var tmpProj:TempProject[];
+    getProjectsFromBTSS():Promise<Project[]>{
+        var tmpProj:Project[];
         return this.btssWdsbService.getProjects();
     }
     //4.add to wdsb.tempprojects
-    postProjectsToTempProjects(tp:TempProject[]){
+    postProjectsToTempProjects(tp:Project[]){
         // (tp).forEach(element => {
         //     this.tempProjectService.postProject(element);
         // });
@@ -55,12 +55,12 @@ export class FnMain  {
  * (use VIEW in MSSQL right outer join + null)
 */
     //5.Compare wdsb.tempProjects and wdsb.Application
-    getNewApplications():Promise<TempProject[]>{ 
+    getNewApplications():Promise<Project[]>{ 
         return this.applicationService.getNewApplications();
         
     }
     //6.add to wdsb.Applications
-    postApplications(app:TempProject[]): void{
+    postApplications(app:Project[]): void{
         // (app).forEach(element => {
         //     this.applicationService.postApplication(element);
         // });

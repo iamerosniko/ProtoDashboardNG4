@@ -1,6 +1,6 @@
 "use strict";
-var TempProject = (function () {
-    function TempProject(ProjectID, ProjectName, ProjectDatasource, ProjectDatabasename, ProjectUserID, ProjectPassword, ProjectIsActive) {
+var Project = (function () {
+    function Project(ProjectID, ProjectName, ProjectDatasource, ProjectDatabasename, ProjectUserID, ProjectPassword, ProjectIsActive) {
         this.ProjectID = ProjectID;
         this.ProjectName = ProjectName;
         this.ProjectDatasource = ProjectDatasource;
@@ -9,6 +9,6 @@ var TempProject = (function () {
         this.ProjectPassword = ProjectPassword;
         this.ProjectIsActive = ProjectIsActive;
     }
-    return TempProject;
+    return Project;
 }());
-exports.TempProject = TempProject;
+exports.Project = Project;

@@ -1,4 +1,4 @@
-export class TempProject {
+export class Project {
     constructor (
         public ProjectID : string,
         public ProjectName: string,
@@ -6,6 +6,6 @@ export class TempProject {
         public ProjectDatabasename : string,
         public ProjectUserID : string,
         public ProjectPassword : string,
-        public ProjectIsActive: Boolean
+        public ProjectIsActive: Boolean,
     ){}
 }

@@ -7,6 +7,7 @@ import { Routes } from '@angular/router';
 import { TabsModule } from 'ngx-bootstrap';
 //Components
 import { SyncMainComponent } from './subcomponents/sync-main.component';
+import { SyncUserComponent } from './subcomponents/sync-user.component';
 import { MaintenanceComponent } from './maintenance.component';
 //functions (providers)
 import { FnMain } from './functions/fn-main';
@@ -14,6 +15,7 @@ import { FnUser } from './functions/fn-user';
 //services
 import { BTSSWDSBService } from '../../services/btss-wdsb.service';
 import { TempProjectService } from '../../services/temp-project.service';
+import { ProjectService } from '../../services/project.service';
 import { ApplicationService } from '../../services/application.service';
 import { AppUserService } from '../../services/app-user.service';
 import { MaintenanceRouting } from './maintenance.routing';
@@ -33,11 +35,12 @@ import { MaintenanceRouting } from './maintenance.routing';
     declarations: [
         MaintenanceComponent,
         SyncMainComponent,
-        
+        SyncUserComponent,
     ],
     providers: [
         BTSSWDSBService,
         TempProjectService,
+        ProjectService,
         ApplicationService,
         AppUserService,
         FnMain,

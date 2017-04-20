@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 //entities
 import { Application } from '../../../entities/application';
 
-import { TempProject } from '../../../entities/tempproject';
+import { Project } from '../../../entities/project';
 @Component({
     moduleId: module.id,
     selector: 'sync-comp',
@@ -16,7 +16,7 @@ import { TempProject } from '../../../entities/tempproject';
 })
 export class SyncMainComponent implements OnInit  { 
     name = 'Sync page';
-    newApps:TempProject[]=[];
+    newApps:Project[]=[];
     constructor(
         private fnMain : FnMain,
     ){ }
@@ -67,11 +67,9 @@ export class SyncMainComponent implements OnInit  {
             });
     }
 /*                     OTHERS                         */
-    saveNewApplications(apps:TempProject[]){
-        //this method is to save new applications to wdsb.applications
-        this.fnMain.postApplications(apps);
-    }
-    //this method is to get users in every database / applications
-    //also saves all users in one repository called wdsb.appusers
+    // saveNewApplications(apps:Project[]){
+    //     //this method is to save new applications to wdsb.applications
+    //     this.fnMain.postApplications(apps);
+    // }
       
 }

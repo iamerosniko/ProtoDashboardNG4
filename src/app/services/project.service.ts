@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 //import { UUID } from 'angular2-uuid';
 import { Project } from '../entities/project';
+import { ProjectUsers } from '../entities/projectusers';
 @Injectable()
-export class TempProjectService {
+export class ProjectService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private apiUrl = 'api/TempProjects';  
-    private api2Url = 'api/Projects';
+    private apiUrl = 'api/Projects';
     constructor(private http: Http){}
 
-    getProjects(): Promise<Project[]> {
+    getProjects(): Promise<ProjectUsers[]> {
         return this.http
                 .get(this.apiUrl, {headers: this.headers})
                 .toPromise()
@@ -27,28 +27,12 @@ export class TempProjectService {
                 .catch(this.handleError);      
     }
 
-    postProject(newTempProject: Project):void{
+    postProject(newProject: Project):void{
          this.http
-            .post(this.apiUrl, JSON.stringify(newTempProject), {headers: this.headers})
+            .post(this.apiUrl, JSON.stringify(newProject), {headers: this.headers})
             .toPromise()
             .then(()=>{console.log(true);})
-            .catch(()=>{console.log(newTempProject.ProjectID);});
-    }
-
-    postProjects(newTempProjects: Project[]):Promise<string>{
-         return this.http
-            .post(this.apiUrl, JSON.stringify(newTempProjects), {headers: this.headers})
-            .toPromise()
-            .then(response => response.json())
-            .catch(()=>{console.log(false);});
-    }
-
-    postProjects2(newProjects: Project[]):Promise<string>{
-         return this.http
-            .post(this.api2Url, JSON.stringify(newProjects), {headers: this.headers})
-            .toPromise()
-            .then(response => response.json())
-            .catch(()=>{console.log(false);});
+            .catch(()=>{console.log(newProject.ProjectID);});
     }
 
     putProject(project: Project): Promise<Project> {

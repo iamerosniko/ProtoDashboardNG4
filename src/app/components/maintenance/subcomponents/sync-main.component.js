@@ -62,28 +62,6 @@ var SyncMainComponent = (function () {
             console.log('done-getNewAppFromTemp');
         });
     };
-    /*                     OTHERS                         */
-    SyncMainComponent.prototype.saveNewApplications = function (apps) {
-        //this method is to save new applications to wdsb.applications
-        this.fnMain.postApplications(apps);
-    };
-    //this method is to get users in every database / applications
-    //also saves all users in one repository called wdsb.appusers
-    SyncMainComponent.prototype.initAppUserSync = function (apps) {
-        var _this = this;
-        var status;
-        (apps).forEach(function (app) {
-            _this.deleteOldUsers(app.AppID);
-            status.push(_this.getNewUsers(app)); // gives an status if the 
-        });
-        //TODO : Get users per database/applications
-    };
-    SyncMainComponent.prototype.deleteOldUsers = function (appID) {
-        this.fnMain.deleteUsers(this.fnMain.getUsersFromWDSB(appID));
-    };
-    SyncMainComponent.prototype.getNewUsers = function (app) {
-        return (this.fnMain.postUsers(this.fnMain.getUsersFromApplications(app)));
-    };
     return SyncMainComponent;
 }());
 SyncMainComponent = __decorate([

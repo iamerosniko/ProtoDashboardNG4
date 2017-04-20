@@ -2,8 +2,8 @@ import { Component,OnInit } from '@angular/core';
 import { FnUser } from './../functions/fn-user';
 import { Observable } from 'rxjs/Observable';
 //entities
-import { Application } from '../../../entities/application';
-import { TempProject } from '../../../entities/tempproject';
+import { Project } from '../../../entities/project';
+import { ProjectUsers } from '../../../entities/projectusers';
 @Component({
     moduleId: module.id,
     selector: 'sync-comp',
@@ -13,26 +13,31 @@ import { TempProject } from '../../../entities/tempproject';
     //     </a>`,
     templateUrl: 'sync-main.component.html',
 })
-export class SyncMainComponent implements OnInit  { 
+export class SyncUserComponent implements OnInit  { 
     name = 'Sync page';
-    newApps:TempProject[]=[];
+    projects:ProjectUsers[]=[];
     constructor(
         private fnUser : FnUser,
     ){ }
 
     ngOnInit(){
-        //this.initAppUserSync();
+        this.getProjects();
+    }
+    
+    getProjects():void{
+        this.fnUser.getProjectsWithBTSSAuthentication()
+        .then(projs => this.projects = projs)
     }
 
-    initProjectUserSync(project:Application):void{
-        this.fnUser.getUsersFromWDSB(app.).then();
+    initUserSync():void{
+        this.fnUser.deleteAllUsers();
     }
 
-    deleteOldUsers(appID: number):void {
-        this.fnUser.deleteUsers(this.fnUser.getUsersFromWDSB(appID));
-    }
+    // deleteOldUsers(appID: number):void {
+    //     this.fnUser.deleteUsers(this.fnUser.getUsersFromWDSB(appID));
+    // }
 
-    getNewUsers(app:Application):boolean{
-        return (this.fnUser.postUsers(this.fnUser.getUsersFromApplications(app)));
-    } 
+    // getNewUsers(app:Application):boolean{
+    //     return (this.fnUser.postUsers(this.fnUser.getUsersFromApplications(app)));
+    // } 
 }

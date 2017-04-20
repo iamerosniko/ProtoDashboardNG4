@@ -3,16 +3,27 @@ import { Injectable } from '@angular/core';
 //services
 import { BTSSWDSBService } from    '../../../services/btss-wdsb.service';
 import { AppUserService } from '../../../services/app-user.service';
+import { ProjectService } from '../../../services/project.service';
 //entities
-import { TempProject } from '../../../entities/tempproject';
+import { Project } from '../../../entities/project';
+import { ProjectUsers } from '../../../entities/projectusers';
 import { Application } from '../../../entities/application';
 import { AppUsers } from '../../../entities/appusers';
 @Injectable()
 export class FnUser  { 
     constructor(
         private btssWdsbService : BTSSWDSBService,
-        private appuserService : AppUserService
+        private appuserService : AppUserService,
+        private projectService : ProjectService
     ){ }
+
+/*  Project section */
+/* Get all projects */
+    getProjectsWithBTSSAuthentication():Promise<ProjectUsers[]>{
+        return this.projectService.getProjects();
+    }
+
+/*  USER SYNCHRONIZATION section           */
 
 /*Part 1 delete all users before synchronization*/
     deleteAllUsers():void{

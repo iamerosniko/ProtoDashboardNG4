@@ -24,7 +24,6 @@ var FnMain = (function () {
     //Part 1 : Clear Temporary Table  > wdsb.tempProjects
     //1.from wdsb.temprojects 
     FnMain.prototype.getTempProjects = function () {
-        var tmpProj;
         return this.tempProjectService.getProjects();
         //return tmpProj;
     };
@@ -68,43 +67,6 @@ var FnMain = (function () {
         //     this.applicationService.postApplication(element);
         // });
         this.tempProjectService.postProjects2(app);
-    };
-    /*Part 4 getting users from specific database app
-     *
-     */
-    //7.getUsers from WDSB
-    FnMain.prototype.getUsersFromWDSB = function (appID) {
-        var appUsers;
-        this.appuserService.getUser(appID).then(function (user) { return appUsers = user; });
-        return appUsers;
-    };
-    //8.deleteUsers where app
-    FnMain.prototype.deleteUsers = function (appUsers) {
-        // (appUsers).forEach(element => {
-        //     this.appuserService.DeleteUser(element.AppUserID);
-        // });
-        for (var _i = 0, appUsers_1 = appUsers; _i < appUsers_1.length; _i++) {
-            var entry = appUsers_1[_i];
-            this.appuserService.DeleteUser(entry.AppUserID);
-        }
-    };
-    //9.getUsers from their database/application
-    FnMain.prototype.getUsersFromApplications = function (app) {
-        var appUsers;
-        this.btssWdsbService.getUsers(app).then(function (user) { return appUsers = user; });
-        return appUsers;
-    };
-    //10.postUsers
-    FnMain.prototype.postUsers = function (appUsers) {
-        var isOk;
-        // (appUsers).forEach(element => {
-        //     this.appuserService.postUser(element).then(()=>{isOk=true});
-        // });
-        for (var _i = 0, appUsers_2 = appUsers; _i < appUsers_2.length; _i++) {
-            var entry = appUsers_2[_i];
-            this.appuserService.postUser(entry).then(function () { isOk = true; });
-        }
-        return isOk;
     };
     return FnMain;
 }());
