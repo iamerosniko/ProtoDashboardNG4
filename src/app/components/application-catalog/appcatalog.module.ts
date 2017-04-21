@@ -42,7 +42,6 @@ import { AppCatalogRouting } from './appcatalog.routing';
         AppCatalogRouting,
     ],
     declarations: [
-        //SyncMainComponent,
         ACComponent,
         ACListComponent,
         ACGridComponent,
