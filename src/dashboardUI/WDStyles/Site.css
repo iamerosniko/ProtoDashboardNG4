@@ -311,6 +311,10 @@ hr {
     width: 25%;
 }
 
+.modal-lg .modal-body .searchbox > span {
+    padding-right:188px;
+}
+
 @media (max-width: 767px) { 
     .col-md-6 > .searchbox > input[type="text"],
     .col-md-12 > .searchbox > input[type="text"] {
@@ -325,3 +329,4 @@ hr {
 .table-fixed-body tbody{
     min-height: 470px;
 }
+
