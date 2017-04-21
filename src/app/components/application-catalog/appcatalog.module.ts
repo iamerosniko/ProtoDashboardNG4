@@ -16,6 +16,7 @@ import { Routes } from '@angular/router';
 import { ACComponent } from './ac-parent.component';
 import { ACGridComponent } from './views/ac-grid.component';
 import { ACListComponent } from './views/ac-list.component';
+import { ACThumbnailComponent } from './subcomponents/ac-thumbnail.component';
 
 /*******************Custom Function Provider**********************************/
 //import { FnMain } from './functions/fn-main';
@@ -44,7 +45,8 @@ import { AppCatalogRouting } from './appcatalog.routing';
         //SyncMainComponent,
         ACComponent,
         ACListComponent,
-        ACGridComponent
+        ACGridComponent,
+        ACThumbnailComponent
     ],
     providers: [
         // BTSSWDSBService,
