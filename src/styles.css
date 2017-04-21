@@ -4,6 +4,7 @@ h1 {
   font-size: 250%;
 }
 /* WD */
+
 .navbar-blue {
     background: #1F4267; /*002d5b*/
     color: #ffffff;
@@ -301,3 +302,5 @@ hr {
 .rating > label:active {
     position:relative;
     top:2px;
+    left:2px;
+}
