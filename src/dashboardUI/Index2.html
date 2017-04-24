@@ -44,310 +44,345 @@
                 </div>
                 <h3>Applications Catalog</h3>
             </div>
-            <!--View Selector and Searchbar-->
+            <!--Tabs-->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <div class="btn-group" role="group">
-                                <a href="#" class="btn btn-default btn-md" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Favorite Apps..."><span class="glyphicon glyphicon-star"></span></a>
-                                <a href="#" class="btn btn-default btn-md" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Available for you..."><span class="glyphicon glyphicon-bookmark"></span></a>
-                                <a href="#" class="btn btn-default btn-md" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="All BizTech Apps..."><span class="glyphicon glyphicon-list-alt"></span></a>
+                            <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li role="presentation">
+                                        <a href="#favorites" aria-controls="favorites" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-star"></span> Favorites</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#available" aria-controls="available" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-bookmark"></span> Available Apps</a>
+                                    </li>
+                                    <li role="presentation" class="active">
+                                        <a href="#allapps" aria-controls="allapps" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span> All BizTech Apps</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                            <div class="searchbox">
-                                <input type="text" class="form-control input-sm" placeholder="Search for apps..."/>
-                                <span class = "glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options&nbsp;<span class="glyphicon glyphicon-chevron-down"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><span class="glyphicon glyphicon-export"></span>&nbsp;Export App List</a></li>
-                                        <li><a href="Index2.html"><span class="glyphicon glyphicon-th-list"></span>&nbsp;List View</a></li>
-                                        <li><a href="Index.html"><span class="glyphicon glyphicon-th"></span>&nbsp;Grid View</a></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;New Application</a></li>
-                                    </ul>
+                <hr />
+            </div>
+            <!--Data-->
+            <div class="container">
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="favorites">
+                        <div class="jumbotron">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="images/About-96.png">
+                                </div>
+                                <div class="col-md-10">
+                                    <h2>You haven't marked any app to your favorites list.</h2>
+                                    <p><small>You can add your apps to your favorites, just go to the Available Apps tab then click the star button.</small></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class=col-md-12>
-                        <label>Availability Indicators</label>
-                        <div class="btn btn-circle btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></div> Available&nbsp;|&nbsp;
-                        <div class="btn btn-circle btn-warning btn-xs"><span class="glyphicon glyphicon-alert"></span></div> Scheduled Maintenance&nbsp;|&nbsp;
-                        <div class="btn btn-circle btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></div> Unavailable (System Downtime/Ongoing Maintenance)
+                    <div class="tab-pane fade" id="available">
+                        <div class="jumbotron">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="images/About-96.png">
+                                </div>
+                                <div class="col-md-10">
+                                    <h2>There are no available apps for you.</h2>
+                                    <p><small>If you think there is an issue retrieving your apps, please contact Site Administrator. Thank you.</small></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <br />
-            <!--Data-->
-            <div class="container">
-                <div class="row">
-                    <table class="table table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th class="col-md-1"></th>
-                                <th class="col-md-5"><span class="glyphicon glyphicon-book"></span>&nbsp;Application Name</th>
-                                <th class="col-md-4"><span class="glyphicon glyphicon-user"></span>&nbsp;Application Owner</th>
-                                <th class="col-md-2"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
+                    <div class="tab-pane fade in active" id="allapps">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <div class="searchbox">
+                                        <input type="text" class="form-control input-sm" placeholder="Search for apps..."/>
+                                        <span class = "glyphicon glyphicon-search form-control-feedback"></span>
                                     </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star1" name="rating1"/><label for="star1" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Operations Scorecard</td>
-                                <td>Amy Misvavitch</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm" onclick="viewDetails()">View Details</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options&nbsp;<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><span class="glyphicon glyphicon-export"></span>&nbsp;Export App List</a></li>
+                                                <li><a href="Index2.html"><span class="glyphicon glyphicon-th-list"></span>&nbsp;List View</a></li>
+                                                <li><a href="Index.html"><span class="glyphicon glyphicon-th"></span>&nbsp;Grid View</a></li>
+                                                <li><a href="Maintenance.html"><span class="glyphicon glyphicon-wrench"></span>&nbsp;Maintenance</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star2" name="rating2"/><label for="star2" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Structured Settlement</td>
-                                <td>Kristen Flaherty</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star3" name="rating3"/><label for="star3" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Benefits Estimates</td>
-                                <td>Kristen Flaherty</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star4" name="rating4"/><label for="star4" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                    <div class="btn btn-circle btn-warning btn-xs">
-                                        <span class="glyphicon glyphicon-alert"></span>
-                                    </div>
-                                </td>
-                                <td>Do-not-call</td>
-                                <td>Brent Morrison</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star5" name="rating5"/><label for="star5" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Project Plan - Generic</td>
-                                <td>Kara Vopalensky</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-danger btn-xs">
-                                        <span class="glyphicon glyphicon-remove"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star6" name="rating6"/><label for="star6" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Project Plan</td>
-                                <td>Melissa Nei</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star7" name="rating7"/><label for="star7" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>SPRNT Tax</td>
-                                <td>Melissa Nei</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-warning btn-xs">
-                                        <span class="glyphicon glyphicon-alert"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star8" name="rating8"/><label for="star8" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>SPRNT Tax Team Balancing</td>
-                                <td>Melissa Nei</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star9" name="rating9"/><label for="star9" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Vulnerability Tracker</td>
-                                <td>David Rawlings</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Business Technologies Security System</td>
-                                <td>Ken Conway</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>TIN Matching</td>
-                                <td>Daniel Slawski</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <div class="btn btn-circle btn-success btn-xs">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </div>
-                                    <fieldset class="favorite">
-                                        <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
-                                    </fieldset>
-                                </td>
-                                <td>Vantage Tax Team Balancing</td>
-                                <td>Melissa Nei</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
-                                        <button type="button" class="btn btn-default btn-sm">View Details</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!--Pagination-->
-            <div class="container">
-                <hr />
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-center">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class=col-md-12>
+                                <label>Availability Indicators</label>
+                                <div class="btn btn-circle btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></div> Available&nbsp;|&nbsp;
+                                <div class="btn btn-circle btn-warning btn-xs"><span class="glyphicon glyphicon-alert"></span></div> Scheduled Maintenance&nbsp;|&nbsp;
+                                <div class="btn btn-circle btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></div> Unavailable (System Downtime/Ongoing Maintenance)
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="col-md-1"></th>
+                                        <th class="col-md-5"><span class="glyphicon glyphicon-book"></span>&nbsp;Application Name</th>
+                                        <th class="col-md-4"><span class="glyphicon glyphicon-user"></span>&nbsp;Application Owner</th>
+                                        <th class="col-md-2"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star1" name="rating1"/><label for="star1" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Operations Scorecard</td>
+                                        <td>Amy Misvavitch</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm" onclick="viewDetails()">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star2" name="rating2"/><label for="star2" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Structured Settlement</td>
+                                        <td>Kristen Flaherty</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star3" name="rating3"/><label for="star3" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Benefits Estimates</td>
+                                        <td>Kristen Flaherty</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star4" name="rating4"/><label for="star4" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                            <div class="btn btn-circle btn-warning btn-xs">
+                                                <span class="glyphicon glyphicon-alert"></span>
+                                            </div>
+                                        </td>
+                                        <td>Do-not-call</td>
+                                        <td>Brent Morrison</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star5" name="rating5"/><label for="star5" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Project Plan - Generic</td>
+                                        <td>Kara Vopalensky</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-danger btn-xs">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star6" name="rating6"/><label for="star6" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Project Plan</td>
+                                        <td>Melissa Nei</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star7" name="rating7"/><label for="star7" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>SPRNT Tax</td>
+                                        <td>Melissa Nei</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-warning btn-xs">
+                                                <span class="glyphicon glyphicon-alert"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star8" name="rating8"/><label for="star8" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>SPRNT Tax Team Balancing</td>
+                                        <td>Melissa Nei</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star9" name="rating9"/><label for="star9" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Vulnerability Tracker</td>
+                                        <td>David Rawlings</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Business Technologies Security System</td>
+                                        <td>Ken Conway</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>TIN Matching</td>
+                                        <td>Daniel Slawski</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="btn btn-circle btn-success btn-xs">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                            <fieldset class="favorite">
+                                                <input type="checkbox" id="star10" name="rating10"/><label for="star10" title="Mark as Favorite">1 star</label>
+                                            </fieldset>
+                                        </td>
+                                        <td>Vantage Tax Team Balancing</td>
+                                        <td>Melissa Nei</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-sm" disabled>Run</button>
+                                                <button type="button" class="btn btn-default btn-sm">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -152,12 +152,13 @@
                                             <div class="tab-pane fade"  id="createApp">
                                                 <div class="panel panel-info">
                                                     <div class="panel-heading">
+                                                        <a href="#tableApp" class="close" aria-controls="tableApp" role="tab" data-toggle="tab">&times;</a>
                                                         <h4>New Application</h4>
                                                     </div>
                                                     <div class="panel-body">
                                                         <br />
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-md-2">
                                                             <ul class="nav nav-pills nav-stacked">
                                                                     <li role="presentation" class="active">
                                                                         <a href="#appDetails" aria-controls="appDetails" role="tab" data-toggle="tab">Details</a>
@@ -167,7 +168,7 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                            <div class="col-md-9">
+                                                            <div class="col-md-10">
                                                                 <div class="tab-content">
                                                                     <div class="tab-pane fade in active" id="appDetails">
                                                                         <div class="row">
@@ -176,7 +177,7 @@
                                                                                     <div class="panel panel-default">
                                                                                         <div class="panel-heading">
                                                                                             <h4 class="panel-title">
-                                                                                                <a data-toggle="collapse" data-parent="#accordion" href="#primaryDetails">Primary Details</a>
+                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#primaryDetails">Primary Details</a>
                                                                                             </h4>
                                                                                         </div>
                                                                                         <div id="primaryDetails" class="panel-collapse collapse in">
@@ -220,7 +221,7 @@
                                                                                     <div class="panel panel-default">
                                                                                         <div class="panel-heading">
                                                                                             <h4 class="panel-title">
-                                                                                                <a data-toggle="collapse" data-parent="#accordion" href="#buDetails">Business Unit Details</a>
+                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#buDetails">Business Unit Details</a>
                                                                                             </h4>
                                                                                         </div>
                                                                                         <div id="buDetails" class="panel-collapse collapse">
@@ -249,14 +250,17 @@
                                                                                     <div class="panel panel-default">
                                                                                         <div class="panel-heading">
                                                                                             <h4 class="panel-title">
-                                                                                                <a data-toggle="collapse" data-parent="#accordion" href="#techDetails">Technology Details</a>
+                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#techDetails">Technology Details</a>
                                                                                             </h4>
                                                                                         </div>
                                                                                         <div id="techDetails" class="panel-collapse collapse">
                                                                                             <div class="panel-body">
                                                                                                 <div class="row">
-                                                                                                    <div class="col-md-12">
+                                                                                                    <div class="col-md-6">
                                                                                                         <input id="chkWeb" type="checkbox" class="css-checkbox med" ><label for="chkWeb" class="css-label med elegant">Is Web?</label>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input id="chkUat" type="checkbox" class="css-checkbox med" ><label for="chkUat" class="css-label med elegant">UAT Accessible?</label>
                                                                                                     </div>
                                                                                                     <br />
                                                                                                     <div class="col-md-6">
@@ -295,33 +299,57 @@
                                                                                                 </div>
                                                                                                 <br />
                                                                                                 <label>DEV Environment ID</label>
-                                                                                                <div class="input-group">
-                                                                                                    <input type="text" class="form-control input-sm" />
-                                                                                                    <span class="input-group-btn">
-                                                                                                        <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
-                                                                                                            <span class="glyphicon glyphicon-search"></span>
-                                                                                                        </a>
-                                                                                                    </span>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="input-group">
+                                                                                                            <input type="text" class="form-control input-sm" placeholder="Project ID"/>
+                                                                                                            <span class="input-group-btn">
+                                                                                                                <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
+                                                                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                                                                </a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control input-sm" placeholder="Path"/>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                                 <br />
                                                                                                 <label>UAT Environment ID</label>
-                                                                                                <div class="input-group">
-                                                                                                    <input type="text" class="form-control input-sm" />
-                                                                                                    <span class="input-group-btn">
-                                                                                                        <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
-                                                                                                            <span class="glyphicon glyphicon-search"></span>
-                                                                                                        </a>
-                                                                                                    </span>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="input-group">
+                                                                                                            <input type="text" class="form-control input-sm" placeholder="Project ID"/>
+                                                                                                            <span class="input-group-btn">
+                                                                                                                <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
+                                                                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                                                                </a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control input-sm" placeholder="Path"/>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                                 <br />
                                                                                                 <label>PROD Environment ID</label>
-                                                                                                <div class="input-group">
-                                                                                                    <input type="text" class="form-control input-sm" />
-                                                                                                    <span class="input-group-btn">
-                                                                                                        <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
-                                                                                                            <span class="glyphicon glyphicon-search"></span>
-                                                                                                        </a>
-                                                                                                    </span>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="input-group">
+                                                                                                            <input type="text" class="form-control input-sm" placeholder="Project ID"/>
+                                                                                                            <span class="input-group-btn">
+                                                                                                                <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
+                                                                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                                                                </a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control input-sm" placeholder="Path"/>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -333,9 +361,44 @@
                                                                     </div>
                                                                     <div class="tab-pane fade" id="appFeatures">
                                                                         <div class="row">
+                                                                            <a href="#" class="btn btn-default btn-md">New Item <span class="glyphicon glyphicon-plus-sign"></span></a>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
                                                                             <div class="col-md-12">
-                                                                                <label>Application Name</label>
-                                                                                <input type="text" class="form-control input-sm" />
+                                                                                <table class="table table-striped">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a href="#" class="accordion-toggle" data-toggle="collapse" data-target="#feature"><span class="glyphicon glyphicon-list-alt"></span> Feature 1</a>
+                                                                                            <div class="collapse in" id="feature">
+                                                                                                <div class="bs-callout bs-callout-primary">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12">
+                                                                                                            <label>Function</label>
+                                                                                                            <input type="text" class="form-control input-sm" />
+                                                                                                        </div>
+                                                                                                        <div class="col-md-12">
+                                                                                                            <label>Description</label>
+                                                                                                            <textarea class="form-control input-sm" style="height: 50px;"></textarea>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-12">
+                                                                                                            <label>Screenshot</label>
+                                                                                                            <div class="input-group">
+                                                                                                                <input type="text" class="form-control input-sm" id="txtFilePath"/>
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <a href="#" class="btn btn-default btn-sm" id="btnOpenFile">
+                                                                                                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                                                                                                    </a>
+                                                                                                                    <input type="file" style="display:none" id="screenshot" name="postFile"/>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -457,17 +520,259 @@
                                             <div class="tab-pane fade"  id="updateApp">
                                                 <div class="panel panel-info">
                                                     <div class="panel-heading">
+                                                        <a href="#tableApp" class="close" aria-controls="tableApp" role="tab" data-toggle="tab">&times;</a>
                                                         <h4>Update Information</h4>
                                                     </div>
                                                     <div class="panel-body">
                                                         <br />
                                                         <div class="row">
-                                                            <div class="col-md-12">
-                                                                <label>Business Unit Name</label>
-                                                                <input type="text" class="form-control input-sm" />
+                                                            <div class="col-md-2">
+                                                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li role="presentation" class="active">
+                                                                        <a href="#updAppDetails" aria-controls="updAppDetails" role="tab" data-toggle="tab">Details</a>
+                                                                    </li>
+                                                                    <li role="presentation">
+                                                                        <a href="#updAppFeatures" aria-controls="updAppFeatures" role="tab" data-toggle="tab">Features</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane fade in active" id="updAppDetails">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="panel-group" id="accordion2">
+                                                                                    <div class="panel panel-default">
+                                                                                        <div class="panel-heading">
+                                                                                            <h4 class="panel-title">
+                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#updPrimaryDetails">Primary Details</a>
+                                                                                            </h4>
+                                                                                        </div>
+                                                                                        <div id="updPrimaryDetails" class="panel-collapse collapse in">
+                                                                                            <div class="panel-body">
+                                                                                                <label>Application Name</label>
+                                                                                                <input type="text" class="form-control input-sm" />
+                                                                                                <br />
+                                                                                                <label>Description</label>
+                                                                                                <textarea style="height:100px;;" class="form-control input-sm"></textarea>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-3">
+                                                                                                        <input id="chkActive2" type="checkbox" class="css-checkbox med" ><label for="chkActive2" class="css-label med elegant">Is Active?</label>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-3">
+                                                                                                        <input id="chkPII2" type="checkbox" class="css-checkbox med" ><label for="chkPII2" class="css-label med elegant">Is PII?</label>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-9 col-md-offset-3">
+                                                                                                        <label>Security</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Date Implemented</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Last Production Date</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br />
+                                                                                    <div class="panel panel-default">
+                                                                                        <div class="panel-heading">
+                                                                                            <h4 class="panel-title">
+                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#updBuDetails">Business Unit Details</a>
+                                                                                            </h4>
+                                                                                        </div>
+                                                                                        <div id="updBuDetails" class="panel-collapse collapse">
+                                                                                            <div class="panel-body">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>BU Owner</label>
+                                                                                                        <select class="form-control input-sm"></select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Primary Contact</label>
+                                                                                                        <select class="form-control input-sm"></select>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Secondary Contact</label>
+                                                                                                        <select class="form-control input-sm"></select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br />
+                                                                                    <div class="panel panel-default">
+                                                                                        <div class="panel-heading">
+                                                                                            <h4 class="panel-title">
+                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#updTechDetails">Technology Details</a>
+                                                                                            </h4>
+                                                                                        </div>
+                                                                                        <div id="updTechDetails" class="panel-collapse collapse">
+                                                                                            <div class="panel-body">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input id="chkWeb2" type="checkbox" class="css-checkbox med" ><label for="chkWeb2" class="css-label med elegant">Is Web?</label>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input id="chkUat2" type="checkbox" class="css-checkbox med" ><label for="chkUat2" class="css-label med elegant">UAT Accessible?</label>
+                                                                                                    </div>
+                                                                                                    <br />
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Front-end Technology</label>
+                                                                                                        <select class="form-control input-sm"></select>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Front-end Path</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Back-end Technology</label>
+                                                                                                        <select class="form-control input-sm"></select>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Back-end Path</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Lifespan</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>Version</label>
+                                                                                                        <input type="text" class="form-control input-sm" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <label>DEV Environment ID</label>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="input-group">
+                                                                                                            <input type="text" class="form-control input-sm" placeholder="Project ID"/>
+                                                                                                            <span class="input-group-btn">
+                                                                                                                <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
+                                                                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                                                                </a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control input-sm" placeholder="Path"/>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <label>UAT Environment ID</label>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="input-group">
+                                                                                                            <input type="text" class="form-control input-sm" placeholder="Project ID"/>
+                                                                                                            <span class="input-group-btn">
+                                                                                                                <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
+                                                                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                                                                </a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control input-sm" placeholder="Path"/>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br />
+                                                                                                <label>PROD Environment ID</label>
+                                                                                                <br />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="input-group">
+                                                                                                            <input type="text" class="form-control input-sm" placeholder="Project ID"/>
+                                                                                                            <span class="input-group-btn">
+                                                                                                                <a href="#" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#modalSearchProject">
+                                                                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                                                                </a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <input type="text" class="form-control input-sm" placeholder="Path"/>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="updAppFeatures">
+                                                                        <div class="row">
+                                                                            <a href="#" class="btn btn-default btn-md">New Item <span class="glyphicon glyphicon-plus-sign"></span></a>
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <table class="table table-striped">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <a href="#" class="accordion-toggle collapsed" data-toggle="collapse" data-target="#updFeature"><span class="glyphicon glyphicon-list-alt"></span> Feature 1</a>
+                                                                                            <div class="collapse" id="updFeature">
+                                                                                                <div class="bs-callout bs-callout-primary">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12">
+                                                                                                            <label>Function</label>
+                                                                                                            <input type="text" class="form-control input-sm" />
+                                                                                                        </div>
+                                                                                                        <div class="col-md-12">
+                                                                                                            <label>Description</label>
+                                                                                                            <textarea class="form-control input-sm" style="height: 50px;"></textarea>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-12">
+                                                                                                            <label>Screenshot</label>
+                                                                                                            <div class="input-group">
+                                                                                                                <input type="text" class="form-control input-sm" id="txtFilePath2"/>
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <a href="#" class="btn btn-default btn-sm" id="btnOpenFile2">
+                                                                                                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                                                                                                    </a>
+                                                                                                                    <input type="file" style="display:none" id="screenshot2" name="postFile"/>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <br />
                                                     </div>
                                                     <div class="panel-footer">
                                                         <div class="row">
@@ -574,6 +879,7 @@
                                             <div class="tab-pane fade"  id="createBu">
                                                 <div class="panel panel-info">
                                                     <div class="panel-heading">
+                                                        <a href="#tableBu" class="close" aria-controls="tableBu" role="tab" data-toggle="tab">&times;</a>
                                                         <h4>New Business Unit</h4>
                                                     </div>
                                                     <div class="panel-body">
@@ -601,6 +907,7 @@
                                             <div class="tab-pane fade"  id="updateBu">
                                                 <div class="panel panel-info">
                                                     <div class="panel-heading">
+                                                        <a href="#tableBu" class="close" aria-controls="tableBu" role="tab" data-toggle="tab">&times;</a>
                                                         <h4>Update Information</h4>
                                                     </div>
                                                     <div class="panel-body">
@@ -718,6 +1025,7 @@
                                             <div class="tab-pane fade" id="createBuContact">
                                                 <div class="panel panel-info">
                                                     <div class="panel-heading">
+                                                        <a href="#tableBuContact" class="close" aria-controls="tableBuContact" role="tab" data-toggle="tab">&times;</a>
                                                         <h4>New BU Contact</h4>
                                                     </div>
                                                     <div class="panel-body">
@@ -751,6 +1059,7 @@
                                             <div class="tab-pane fade" id="updateBuContact">
                                                 <div class="panel panel-info">
                                                     <div class="panel-heading">
+                                                        <a href="#tableBuContact" class="close" aria-controls="tableBuContact" role="tab" data-toggle="tab">&times;</a>
                                                         <h4>Update Information</h4>
                                                     </div>
                                                     <div class="panel-body">
@@ -795,7 +1104,10 @@
             $(function(){
                 $('[data-toggle="popover"]').popover({container:'body'});  
 
-               
+                $('#btnOpenFile').click(function () { $('#screenshot').click(); });
+                $('#screenshot').change(function () { $('#txtFilePath').val( $('#screenshot').val() ); });
+                $('#btnOpenFile2').click(function () { $('#screenshot2').click(); });
+                $('#screenshot2').change(function () { $('#txtFilePath2').val( $('#screenshot2').val() ); });
             });
         </script>
     </body>
