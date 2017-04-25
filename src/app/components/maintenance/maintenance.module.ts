@@ -6,8 +6,10 @@ import { Routes } from '@angular/router';
 // ngx-components
 import { TabsModule } from 'ngx-bootstrap';
 //Components
-import { SyncMainComponent } from './subcomponents/sync-main.component';
-import { SyncUserComponent } from './subcomponents/sync-user.component';
+import { SyncMainComponent } from './subcomponents/project-sync/sync-main.component';
+import { SyncUserComponent } from './subcomponents/user-sync/sync-user.component';
+import { AppListComponent } from './subcomponents/applications/app-list.component';
+import { AppFormComponent } from './subcomponents/applications/app-form.component';
 import { MaintenanceComponent } from './maintenance.component';
 //functions (providers)
 import { FnMain } from './functions/fn-main';
@@ -34,6 +36,8 @@ import { MaintenanceRouting } from './maintenance.routing';
     ],
     declarations: [
         MaintenanceComponent,
+        AppListComponent,
+        AppFormComponent,
         SyncMainComponent,
         SyncUserComponent,
     ],
