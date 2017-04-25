@@ -8,10 +8,9 @@ import { Observable } from 'rxjs/Observable';
     templateUrl: 'maintenance.component.html',
 })
 export class MaintenanceComponent implements OnInit  { 
-    
     constructor(
     ){ }
-
+    showForm:boolean=false;
     ngOnInit(){
         
     }
