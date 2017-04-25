@@ -4,7 +4,6 @@ h1 {
   font-size: 250%;
 }
 /* WD */
-
 .navbar-blue {
     background: #1F4267; /*002d5b*/
     color: #ffffff;
@@ -58,8 +57,14 @@ h1 {
     background-color: #080808;
 }
 
+body{
+   background: #ecf0f5; 
+}
+
 .main-content {
-    padding-top: 60px;
+    position:absolute;
+    width:100%;
+    padding-top: 60px; 
     background: #ecf0f5;
 }
 
@@ -79,21 +84,6 @@ h1 {
 
 .breadcrumb {
     background-color: #e3eaf1;
-}
-
-.col-md-6 > input[type="text"].searchbar {
-    width: 50%;
-}
-
-.col-md-12 > input[type="text"].searchbar {
-    width: 25%;
-}
-
-@media (max-width: 767px) { 
-    .col-md-6 > input[type="text"].searchbar,
-    .col-md-12 > input[type="text"].searchbar {
-        width: 100%;
-    }
 }
 
 .popover {
@@ -303,4 +293,69 @@ hr {
     position:relative;
     top:2px;
     left:2px;
+}
+
+.searchbox {
+    position: relative;
+}
+
+.searchbox > input[type=text] {
+    border-radius: 14px;
+    max-width: 100%;
+    padding-right: 25px;
+}
+
+.col-md-6 > .searchbox > input[type="text"] {
+    width: 60%;
+}
+
+.col-md-6 > .searchbox > span {
+    padding-right:240px;
+}
+
+.col-md-12 > .searchbox > input[type="text"] {
+    width: 25%;
+}
+
+.modal-lg .modal-body .searchbox > span {
+    padding-right:188px;
+}
+
+@media (max-width: 767px) { 
+    .col-md-6 > .searchbox > input[type="text"],
+    .col-md-12 > .searchbox > input[type="text"] {
+        width: 100%;
+    }
+
+    .col-md-6 > .searchbox > span {
+        padding-right:5px;;
+    }
+}
+
+.accordion-toggle:hover {
+    text-decoration: none;
+}
+.accordion-toggle:focus {
+    text-decoration: none;
+}
+
+.accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+
+.accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.jumbotron {
+    background-color: #c3e0f8;
+}
+
+.jumbotron img {
+    width:80%;
 }
