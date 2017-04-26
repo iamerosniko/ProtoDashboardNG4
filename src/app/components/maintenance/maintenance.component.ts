@@ -7,12 +7,15 @@ import { Observable } from 'rxjs/Observable';
     selector: 'maintenance-parent',
     templateUrl: 'maintenance.component.html',
 })
-export class MaintenanceComponent implements OnInit  { 
+export class MaintenanceComponent { 
     constructor(
     ){ }
-    showForm:boolean=false;
-    ngOnInit(){
-        
-    }
     
+    showForm:boolean=false;
+    formMode:string= 'New';
+    
+    changeView(mode:string){
+        this.formMode=mode;
+        this.showForm=!this.showForm;
+    }
 }
