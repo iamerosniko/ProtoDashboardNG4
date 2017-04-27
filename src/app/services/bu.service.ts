@@ -17,7 +17,7 @@ export class BUService {
                 .catch(this.handleError);
     }
 
-    getBU(id: string): Promise<BU> {
+    getBU(id: number): Promise<BU> {
         const url = `${this.apiUrl}/${id}`;
         return this.http
                 .get(url)
@@ -26,15 +26,15 @@ export class BUService {
                 .catch(this.handleError);      
     }
 
-    postBU(bu: BU):void{
-         this.http
+    postBU(bu: BU): Promise<any>{
+         return this.http
             .post(this.apiUrl, JSON.stringify(bu), {headers: this.headers})
             .toPromise()
-            .then(()=>{console.log(true);})
-            .catch(()=>{console.log(bu.BUID);});
+            .then(()=>JSON.stringify(true) )
+            .catch(()=>JSON.stringify(false) );
     }
 
-    putBU(bu: BU): Promise<BU> {
+    putBU(bu: BU): Promise<any> {
         const url = `${this.apiUrl}/${bu.BUID}`;
         return this.http
             .put(url, JSON.stringify(bu), {headers: this.headers})
