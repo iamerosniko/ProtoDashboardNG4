@@ -14,8 +14,12 @@ export class MaintenanceComponent {
     showForm:boolean=false;
     formMode:string= 'New';
     
-    changeView(mode:string){
+    toFormView(mode:string){
         this.formMode=mode;
-        this.showForm=!this.showForm;
+        this.showForm=true;
+    }
+
+    toListView(){
+        this.showForm=false;
     }
 }
