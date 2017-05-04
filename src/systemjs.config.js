@@ -22,6 +22,10 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      //moment
+      'moment':'npm:moment/min/moment.min.js',
+      
+      'ng2-datetime-picker': 'npm:ng2-datetime-picker/dist',
       //ngx-bootstrap 
       'ngx-bootstrap':'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
       // other libraries
@@ -40,6 +44,10 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      'ng2-datetime-picker': {
+          main: 'ng2-datetime-picker.umd.js',
+          defaultExtension: 'js'
       }
     }
   });

@@ -12,16 +12,15 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 //entities
 var application_1 = require("../../../../entities/application");
-var maintenance_component_1 = require("../../maintenance.component");
 var fn_main_app_1 = require("../../functions/fn-main-app");
 var AppFormComponent = (function () {
     function AppFormComponent(route, router, fn) {
         this.route = route;
         this.router = router;
         this.fn = fn;
-        this.name = 'Sync page';
-        this.newApps = [];
         this.formMode = 'New';
+        this.dt = new Date();
+        this.showDate = 0;
         this.clrApp();
     }
     AppFormComponent.prototype.clrApp = function () {
@@ -44,10 +43,6 @@ var AppFormComponent = (function () {
     };
     return AppFormComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", maintenance_component_1.MaintenanceComponent)
-], AppFormComponent.prototype, "mainView", void 0);
 AppFormComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

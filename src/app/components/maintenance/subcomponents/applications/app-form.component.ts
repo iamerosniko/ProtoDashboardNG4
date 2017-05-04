@@ -1,4 +1,4 @@
-import { Component,OnInit,Input } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute,Router } from '@angular/router';
 //entities
@@ -12,11 +12,11 @@ import { FnMainApp } from '../../functions/fn-main-app';
     templateUrl: 'app-form.component.html',
 })
 export class AppFormComponent implements OnInit  { 
-    @Input() mainView:MaintenanceComponent;
-    name = 'Sync page';
-    newApps:Project[]=[];
     formMode:string= 'New';
+    dt:Date= new Date();
     selectedApp:Application
+    showDate:number=0;
+
     constructor(
         private route: ActivatedRoute,
         private router :Router,
