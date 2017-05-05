@@ -24,7 +24,8 @@ export class AppFormComponent implements OnInit  {
     dt:Date= new Date();
     selectedApp:Application
     showDate:number=0;
-
+    feTech:any=[];
+    beTech:any=[];
     constructor(
         private route: ActivatedRoute,
         private router :Router,
@@ -33,8 +34,8 @@ export class AppFormComponent implements OnInit  {
         private fnContact : FnContact
     ){
         this.clrApp();
-        var feTech=["MS Access",".NET"];
-        var beTech=["MS Access","MS SQL"];
+        this.feTech=["MS Access",".NET"];
+        this.beTech=["MS Access","MS SQL"];
     }
 
     clrApp(){
