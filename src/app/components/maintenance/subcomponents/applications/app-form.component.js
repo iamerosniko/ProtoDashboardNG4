@@ -82,6 +82,15 @@ var AppFormComponent = (function () {
         this.router.navigate(['/Maintenance', { outlets: { 'apps': ['Lists'] } }]);
     };
     AppFormComponent.prototype.checkState = function () {
+        console.log("fisrt");
+        console.log(this.selectedApp.AppName.trim().length > 0);
+        console.log(this.selectedApp.AppBU == 0);
+        console.log(this.selectedApp.FrontTechnology.trim().length > 0);
+        console.log(this.selectedApp.BackTechnology.trim().length > 0);
+        console.log(this.selectedApp.PrimaryBUContact == 0);
+        console.log(this.selectedApp.AppSecurity.trim().length > 0);
+        console.log(this.selectedApp.ProjectModID.trim().length > 0);
+        console.log(this.selectedApp.ProjectOpsID.trim().length > 0);
         var myState = (this.selectedApp.AppName.trim().length > 0 ||
             this.selectedApp.AppBU == 0 ||
             this.selectedApp.FrontTechnology.trim().length > 0 ||
@@ -90,7 +99,11 @@ var AppFormComponent = (function () {
             || this.selectedApp.AppSecurity.trim().length > 0
             || this.selectedApp.ProjectModID.trim().length > 0
             || this.selectedApp.ProjectOpsID.trim().length > 0);
+        console.log(myState);
         return myState;
+    };
+    AppFormComponent.prototype.submitApp = function () {
+        this.fnMainApp.submitApp(this.selectedApp.AppID == 0, this.selectedApp);
     };
     return AppFormComponent;
 }());
