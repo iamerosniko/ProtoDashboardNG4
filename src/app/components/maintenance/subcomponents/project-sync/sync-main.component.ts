@@ -83,6 +83,7 @@ export class SyncMainComponent implements OnInit  {
         this.fnMain.getNewApplications()
             .then(apps =>{
                 this.newApps=apps;
+                this.checkComplete();
                 // console.log('done-getNewAppFromTemp');
             });
     }
