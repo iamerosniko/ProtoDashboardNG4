@@ -14,43 +14,26 @@ var temp_project_service_1 = require("../../../services/temp-project.service");
 var btss_wdsb_service_1 = require("../../../services/btss-wdsb.service");
 var application_service_1 = require("../../../services/application.service");
 var app_user_service_1 = require("../../../services/app-user.service");
-var FnApp = (function () {
-    function FnApp(tempProjectService, btssWdsbService, applicationService, appuserService) {
+var FnAppClient = (function () {
+    function FnAppClient(tempProjectService, btssWdsbService, applicationService, appuserService) {
         this.tempProjectService = tempProjectService;
         this.btssWdsbService = btssWdsbService;
         this.applicationService = applicationService;
         this.appuserService = appuserService;
     }
-    FnApp.prototype.getApplications = function () {
-        return this.applicationService.getApplications();
+    FnAppClient.prototype.getAuth = function (projectID) {
+        var isAuth = false;
+        this.appuserService.getAuth(projectID)
+            .then(function (a) { return isAuth = a.isAuth; });
+        return isAuth;
     };
-    FnApp.prototype.setAppToThumnails = function (apps) {
-        var len = apps.length;
-        var appThumbnail = [];
-        for (var i = 0; i < apps.length; i += 4) {
-            var tempApps;
-            var ctr = len - i;
-            if (ctr % 4 == 0) {
-                tempApps.push(apps[i]);
-                tempApps.push(apps[i + 1]);
-                tempApps.push(apps[i + 2]);
-                tempApps.push(apps[i + 3]);
-            }
-            else {
-                for (var j = i; j < ctr; j++) {
-                    tempApps.push(apps[j]);
-                }
-            }
-            appThumbnail.push(tempApps);
-        }
-    };
-    return FnApp;
+    return FnAppClient;
 }());
-FnApp = __decorate([
+FnAppClient = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [temp_project_service_1.TempProjectService,
         btss_wdsb_service_1.BTSSWDSBService,
         application_service_1.ApplicationService,
         app_user_service_1.AppUserService])
-], FnApp);
-exports.FnApp = FnApp;
+], FnAppClient);
+exports.FnAppClient = FnAppClient;

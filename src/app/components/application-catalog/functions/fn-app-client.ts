@@ -10,7 +10,7 @@ import { Project } from '../../../entities/project';
 import { Application } from '../../../entities/application';
 import { AppUsers } from '../../../entities/appusers';
 @Injectable()
-export class FnApp  { 
+export class FnAppClient  { 
     constructor(
         private tempProjectService: TempProjectService,
         private btssWdsbService : BTSSWDSBService,
@@ -18,28 +18,10 @@ export class FnApp  {
         private appuserService : AppUserService
     ){ }
 
-    getApplications():Promise<Application[]>{
-        return this.applicationService.getApplications();
-    }
-
-    setAppToThumnails(apps:Application[]){
-        var len:number = apps.length;
-        var appThumbnail=[];
-        for (var i = 0; i < apps.length; i+=4){
-            var tempApps:Application[];
-            var ctr:number = len - i;
-            if(ctr % 4 == 0){
-                tempApps.push(apps[i]);
-                tempApps.push(apps[i+1]);
-                tempApps.push(apps[i+2]);
-                tempApps.push(apps[i+3]);
-            }
-            else{
-                for (var j = i; j < ctr; j++){
-                    tempApps.push(apps[j]);
-                }
-            }
-            appThumbnail.push(tempApps);
-        }
+    getAuth(projectID:string):boolean{
+        var isAuth=false;
+        this.appuserService.getAuth(projectID)
+            .then(a=>isAuth=a.isAuth);
+        return isAuth;
     }
 }
