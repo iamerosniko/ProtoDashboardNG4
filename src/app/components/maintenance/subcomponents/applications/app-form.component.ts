@@ -26,6 +26,7 @@ export class AppFormComponent implements OnInit  {
     showDate:number=0;
     feTech:any=[];
     beTech:any=[];
+    mode:number=0;
     constructor(
         private route: ActivatedRoute,
         private router :Router,
@@ -86,5 +87,9 @@ export class AppFormComponent implements OnInit  {
     applicationView(){
         //[routerLink]="['/Maintenance', {outlets: {'apps': ['Lists']}}]"
         this.router.navigate(['/Maintenance', {outlets: {'apps': ['Lists']}}]);
+    }
+
+    checkState(){
+        
     }
 }

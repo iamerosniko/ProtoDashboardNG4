@@ -22,9 +22,9 @@ export class SyncMainComponent implements OnInit  {
         private fnMain : FnMain,
         
     ){ 
-        setInterval(() => {
-            this.checkComplete();
-     }, 1000);
+    //     setInterval(() => {
+    //         this.checkComplete();
+    //  }, 1000);
     }
 
     checkComplete():boolean{
