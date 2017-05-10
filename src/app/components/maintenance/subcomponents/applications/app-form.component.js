@@ -37,6 +37,8 @@ var AppFormComponent = (function () {
         this.feTech = [];
         this.beTech = [];
         this.mode = 0;
+        this.date_implemented = null; //{ date: { year: 2018, month: 10, day: 9 } };
+        this.date_lastProd = null; //{ date: { year: 2018, month: 10, day: 9 } };
         this.clrApp();
         this.feTech = ["MS Access", ".NET"];
         this.beTech = ["MS Access", "MS SQL"];
@@ -105,7 +107,14 @@ var AppFormComponent = (function () {
             _this.applicationView();
         });
     };
-    AppFormComponent.prototype.onDateChanged = function (event) {
+    AppFormComponent.prototype.onDateChanged = function (event, ctr) {
+        //console.log(event);
+        if (ctr == 1) {
+            this.selectedApp.LastProdDate = new Date(event.epoc);
+        }
+        else if (ctr == 0) {
+            this.selectedApp.DateImplemented = new Date(event.epoc);
+        }
         // event properties are: event.date, event.jsdate, event.formatted and event.epoc
     };
     return AppFormComponent;

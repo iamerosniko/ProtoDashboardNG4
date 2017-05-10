@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators,ReactiveFormsModule  } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute,Router } from '@angular/router';
 //datetimecomponent
@@ -33,6 +34,8 @@ export class AppFormComponent implements OnInit  {
     feTech:any=[];
     beTech:any=[];
     mode:number=0;
+    private date_implemented: Object = null;//{ date: { year: 2018, month: 10, day: 9 } };
+    private date_lastProd: Object = null//{ date: { year: 2018, month: 10, day: 9 } };
     constructor(
         private route: ActivatedRoute,
         private router :Router,
@@ -64,6 +67,7 @@ export class AppFormComponent implements OnInit  {
         this.getDropdownBU();
         this.getDropdownContact1();
         this.getDropdownContact2();
+        
     }
 
     getDropdownBU(){
@@ -119,8 +123,14 @@ export class AppFormComponent implements OnInit  {
         });
     }
 
-    onDateChanged(event: IMyDateModel) {
-        console.log(event);
+    onDateChanged(event: IMyDateModel,ctr:number) {
+        //console.log(event);
+        if(ctr==1){
+            this.selectedApp.LastProdDate=new Date(event.epoc);
+        }
+        else if(ctr==0){
+            this.selectedApp.DateImplemented=new Date(event.epoc);
+        }
         // event properties are: event.date, event.jsdate, event.formatted and event.epoc
     }
 }

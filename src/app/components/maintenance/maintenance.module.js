@@ -60,6 +60,7 @@ MaintenanceModule = __decorate([
             common_1.CommonModule,
             forms_1.FormsModule,
             http_1.HttpModule,
+            forms_1.ReactiveFormsModule,
             ngx_bootstrap_1.ProgressbarModule.forRoot(),
             ng2_datetime_picker_1.Ng2DatetimePickerModule,
             mydatepicker_1.MyDatePickerModule,
