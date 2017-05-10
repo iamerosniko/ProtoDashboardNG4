@@ -33,6 +33,7 @@ var AppFormComponent = (function () {
         this.feTech = [];
         this.beTech = [];
         this.mode = 0;
+        this.saving = false;
         this.clrApp();
         this.feTech = ["MS Access", ".NET"];
         this.beTech = ["MS Access", "MS SQL"];
@@ -91,7 +92,7 @@ var AppFormComponent = (function () {
             || this.selectedApp.ProjectModID.trim().length == 0
             || this.selectedApp.ProjectOpsID.trim().length == 0);
         //console.log(myState);
-        return myState;
+        return myState || this.saving;
     };
     AppFormComponent.prototype.submitApp = function () {
         var _this = this;
