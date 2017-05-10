@@ -2,7 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute,Router } from '@angular/router';
 //datetimecomponent
-// import { IMyOptions } from 'mydatepicker';
+import { IMyOptions, IMyDateModel } from 'mydatepicker';
 //entities
 import { Application } from '../../../../entities/application';
 import { MaintenanceComponent } from '../../maintenance.component';
@@ -19,11 +19,10 @@ import { FnContact } from '../../functions/fn-contact';
     templateUrl: 'app-form.component.html',
 })
 export class AppFormComponent implements OnInit  { 
-    // private myDatePickerOptions: IMyOptions = {
-    //     // other options...
-    //     dateFormat: 'mm/dd/yyyy',
-    // };
-    // private model: Object = { date: { year: 2018, month: 10, day: 9 } };
+    private myDatePickerOptions: IMyOptions = {
+        // other options...
+        dateFormat: 'mm/dd/yyyy',
+    };
     formMode:string= 'New';
     dropDownBU:BU[]=[];
     dropDownContact1:Contact[]=[];
@@ -118,5 +117,10 @@ export class AppFormComponent implements OnInit  {
             alert("success");
             this.applicationView();
         });
+    }
+
+    onDateChanged(event: IMyDateModel) {
+        console.log(event);
+        // event properties are: event.date, event.jsdate, event.formatted and event.epoc
     }
 }

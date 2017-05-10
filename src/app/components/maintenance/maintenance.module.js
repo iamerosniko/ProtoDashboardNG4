@@ -11,6 +11,8 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 /********Pgination************************************** */
 var ngx_pagination_1 = require("ngx-pagination");
+/*datetime*/
+var mydatepicker_1 = require("mydatepicker");
 /* ngx-bootstrap */
 var ng2_datetime_picker_1 = require("ng2-datetime-picker");
 var ngx_bootstrap_1 = require("ngx-bootstrap");
@@ -60,6 +62,7 @@ MaintenanceModule = __decorate([
             http_1.HttpModule,
             ngx_bootstrap_1.ProgressbarModule.forRoot(),
             ng2_datetime_picker_1.Ng2DatetimePickerModule,
+            mydatepicker_1.MyDatePickerModule,
             maintenance_routing_1.MaintenanceRouting,
         ],
         declarations: [
