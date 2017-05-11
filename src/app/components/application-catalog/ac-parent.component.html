@@ -71,10 +71,10 @@
 <div class="container">
     <div class="tab-content">
         <div class="tab-pane fade" id="favorites">
-            <ac-noavail *ngIf="viewtype==2 && listApps.length==0"></ac-noavail>
+            <ac-nofav *ngIf="tabselected==2 && apps.length==0"></ac-nofav>
         </div>
         <div class="tab-pane fade" id="available">
-            <ac-noavail *ngIf="viewtype==1 && listApps.length==0"></ac-noavail>
+            <ac-noavail *ngIf="tabselected==1 && apps.length==0"></ac-noavail>
         </div>
         <div class="tab-pane fade in active" id="allapps">
             
