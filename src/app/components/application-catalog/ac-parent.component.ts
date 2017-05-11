@@ -15,13 +15,27 @@ export class ACComponent {
   constructor(
       private fn: FnMainApp,
   ){ }
+
   ngOnInit(){
+    this.getAllApps();
+  }
+  //all biztech apps
+  getAllApps(){
     this.fn.getAppsClient()
       .then(apps=>{
           this.apps=apps;
           this.sliceToFour();
       });
   }
+  //favorites
+  getMyFavApps(){
+    
+  }
+  //my available app
+  getMyAvailApps(){
+    
+  }
+
   sliceToFour(){
     var ctr=0,listCtr=0;
     var tempList:AppForClient[]=[];
