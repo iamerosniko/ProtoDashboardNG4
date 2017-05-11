@@ -26,14 +26,25 @@ export class ACComponent {
           this.apps=apps;
           this.sliceToFour();
       });
-  }
-  //favorites
-  getMyFavApps(){
-    
+      this.tabselected=0;
   }
   //my available app
   getMyAvailApps(){
-    
+    this.fn.getAvailAppsClient()
+      .then(apps=>{
+          this.apps=apps;
+          this.sliceToFour();
+      });
+      this.tabselected=1
+  }
+  //favorites
+  getMyFavApps(){
+    this.fn.getFavAppsClient()
+      .then(apps=>{
+          this.apps=apps;
+          this.sliceToFour();
+      });
+      this.tabselected=2;
   }
 
   sliceToFour(){
