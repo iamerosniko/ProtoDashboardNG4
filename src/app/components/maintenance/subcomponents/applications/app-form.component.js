@@ -101,11 +101,19 @@ var AppFormComponent = (function () {
         var _this = this;
         this.fnMainApp.submitApp(this.selectedApp.AppID == 0, this.selectedApp)
             .then(function () {
-            alert("success");
-            _this.applicationView();
+            if (_this.features.length > 0)
+                _this.fnMainApp.submitFeatures(_this.features)
+                    .then(function () {
+                    alert("success");
+                    _this.applicationView();
+                })
+                    .catch(function () {
+                    console.log('problem in adding features');
+                });
+        })
+            .catch(function () {
+            console.log('problem in applications');
         });
-        if (this.features.length > 0)
-            this.fnMainApp.submitFeatures(this.features);
     };
     AppFormComponent.prototype.addFeature = function () {
         this.features.push(new feature_1.Feature(0, this.selectedApp.AppID, '', '', ''));

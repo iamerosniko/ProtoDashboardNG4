@@ -37,7 +37,7 @@ var FnMainApp = (function () {
             : this.appService.putApplication(app);
     };
     FnMainApp.prototype.submitFeatures = function (features) {
-        this.featService.postFeatures(features);
+        return this.featService.postFeatures(features);
     };
     //CLIENT INTERFACE
     //get all (for client side only)

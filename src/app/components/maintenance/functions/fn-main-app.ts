@@ -33,8 +33,8 @@ export class FnMainApp  {
             ? this.appService.postApplication(app) 
             : this.appService.putApplication(app);
     }
-    submitFeatures(features:Feature[]){
-        this.featService.postFeatures(features);
+    submitFeatures(features:Feature[]):Promise<any>{
+        return this.featService.postFeatures(features);
     }
 
     //CLIENT INTERFACE

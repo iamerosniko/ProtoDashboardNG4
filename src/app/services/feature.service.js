@@ -34,24 +34,24 @@ var FeatureService = (function () {
             .catch(this.handleError);
     };
     //single post
-    FeatureService.prototype.postFeature = function (feature) {
+    FeatureService.prototype.postFeature = function (features) {
         return this.http
-            .post(this.apiUrl, JSON.stringify(feature), { headers: this.headers })
+            .post(this.apiUrl, JSON.stringify(features), { headers: this.headers })
             .toPromise()
             .then(function () { return JSON.stringify(true); })
             .catch(function () { return JSON.stringify(false); });
     };
     //bulk post (add/modify)
     FeatureService.prototype.postFeatures = function (feature) {
-        var url = this.apiUrl + "/BulkPostWDSB_Features";
+        var url = this.apiUrl + "/PostWDSB_Features2";
         return this.http
-            .post(this.apiUrl, JSON.stringify(feature), { headers: this.headers })
+            .post(url, JSON.stringify(feature), { headers: this.headers })
             .toPromise()
             .then(function () { return JSON.stringify(true); })
-            .catch(function () { return JSON.stringify(false); });
+            .catch(this.handleError);
     };
     FeatureService.prototype.putFeature = function (feature) {
-        var url = this.apiUrl + "/" + bu.FeatureID;
+        var url = this.apiUrl + "/" + feature.FeatureID;
         return this.http
             .put(url, JSON.stringify(feature), { headers: this.headers })
             .toPromise()

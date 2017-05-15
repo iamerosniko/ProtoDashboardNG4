@@ -118,11 +118,19 @@ export class AppFormComponent implements OnInit  {
     submitApp():void{
         this.fnMainApp.submitApp(this.selectedApp.AppID==0,this.selectedApp)
         .then(()=>{
-            alert("success");
-            this.applicationView();
+            if(this.features.length>0)
+                this.fnMainApp.submitFeatures(this.features)
+                .then(()=>{
+                    alert("success");
+                    this.applicationView();
+                })
+                .catch(()=>{
+                    console.log('problem in adding features');
+                });
+        })
+        .catch(()=>{
+            console.log('problem in applications');
         });
-        if(this.features.length>0)
-            this.fnMainApp.submitFeatures(this.features);
     }
 
     addFeature(){

@@ -27,24 +27,24 @@ export class FeatureService {
                 .catch(this.handleError);      
     }
     //single post
-    postFeature(feature: Feature): Promise<any>{
+    postFeature(features: Feature[]): Promise<any>{
          return this.http
-            .post(this.apiUrl, JSON.stringify(feature), {headers: this.headers})
+            .post(this.apiUrl, JSON.stringify(features), {headers: this.headers})
             .toPromise()
             .then(()=>JSON.stringify(true) )
             .catch(()=>JSON.stringify(false) );
     }
     //bulk post (add/modify)
     postFeatures(feature: Feature[]): Promise<any>{
-         const url = `${this.apiUrl}/BulkPostWDSB_Features`;
+         const url = `${this.apiUrl}/PostWDSB_Features2`;
          return this.http
-            .post(this.apiUrl, JSON.stringify(feature), {headers: this.headers})
+            .post(url, JSON.stringify(feature), {headers: this.headers})
             .toPromise()
             .then(()=>JSON.stringify(true) )
-            .catch(()=>JSON.stringify(false) );
+            .catch(this.handleError);
     }
     putFeature(feature: Feature): Promise<any> {
-        const url = `${this.apiUrl}/${bu.FeatureID}`;
+        const url = `${this.apiUrl}/${feature.FeatureID}`;
         return this.http
             .put(url, JSON.stringify(feature), {headers: this.headers})
             .toPromise()
