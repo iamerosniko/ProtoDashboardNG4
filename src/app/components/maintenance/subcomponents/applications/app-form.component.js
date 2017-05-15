@@ -30,6 +30,7 @@ var AppFormComponent = (function () {
         this.dropDownContact1 = [];
         this.dropDownContact2 = [];
         this.dt = new Date();
+        this.features = [];
         this.showDate = 0;
         this.feTech = [];
         this.beTech = [];
@@ -40,7 +41,7 @@ var AppFormComponent = (function () {
         this.beTech = ["MS Access", "MS SQL"];
     }
     AppFormComponent.prototype.clrApp = function () {
-        this.selectedApp = new application_1.Application(0, '', 0, '', '', 0, 0, 0, false, false, '', null, null, '', '', '', false, '', '', '', false, []);
+        this.selectedApp = new application_1.Application(0, '', 0, '', '', 0, 0, 0, false, false, '', null, null, '', '', '', false, '', '', '', false);
     };
     AppFormComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -51,6 +52,7 @@ var AppFormComponent = (function () {
                 _this.formMode = _this.selectedApp.AppID == 0
                     ? 'New' : 'Update';
             });
+            _this.fnMainApp.getFeatures(params.id).then(function (features) { return _this.features = features; });
         });
         this.getDropdownBU();
         this.getDropdownContact1();
@@ -102,9 +104,11 @@ var AppFormComponent = (function () {
             alert("success");
             _this.applicationView();
         });
+        if (this.features.length > 0)
+            this.fnMainApp.submitFeatures(this.features);
     };
     AppFormComponent.prototype.addFeature = function () {
-        this.selectedApp.WDSB_Features.push(new feature_1.Feature(0, 0, '', '', ''));
+        this.features.push(new feature_1.Feature(0, this.selectedApp.AppID, '', '', ''));
     };
     return AppFormComponent;
 }());
