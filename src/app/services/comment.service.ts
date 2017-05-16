@@ -26,9 +26,9 @@ export class CommentService {
                 .catch(this.handleError);      
     }
 
-    postComment(bu: Comment): Promise<any>{
+    postComment(comment: Comment): Promise<any>{
          return this.http
-            .post(this.apiUrl, JSON.stringify(bu), {headers: this.headers})
+            .post(this.apiUrl, JSON.stringify(comment), {headers: this.headers})
             .toPromise()
             .then(()=>JSON.stringify(true) )
             .catch(()=>JSON.stringify(false) );
