@@ -1,7 +1,7 @@
 
 <div class="row">
-    <div class="col-md-7">
-        <div class="bs-callout bs-callout-primary">
+    <div [ngClass]="thisIndex%2==0?'col-md-7':'col-md-7 pull-right'">
+        <div [ngClass]="thisIndex%2==0?'bs-callout bs-callout-primary':'bs-callout bs-callout-default'">
             <h4>{{thiscomment.Subject}}</h4>
             <blockquote>
                 <p>

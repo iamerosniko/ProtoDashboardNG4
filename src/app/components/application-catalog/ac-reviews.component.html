@@ -66,25 +66,8 @@
         <br />
         <!--Review section-->
         <div class="row">  
-            <div class="panel-group" *ngFor="let mycomment of comments">  
-                <!--<ac-comments [thiscomment]="mycomment"></ac-comments>      -->
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="bs-callout bs-callout-primary">
-                            <h4>{{mycomment.Subject}}</h4>
-                            <blockquote>
-                                <p>
-                                    {{mycomment.Comment}}
-                                </p>
-                                <small>
-                                    {{mycomment.UserName}}, {{mycomment.DatePosted | date:'medium'}}
-                                    <!--Peter Mead, March 1, 2017 11:00 P.M.-->
-                                </small>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="panel-group" *ngFor="let mycomment of comments | paginate: config; let i = index; ">  
+                <ac-comments [thiscomment]="mycomment" [thisIndex]="i"></ac-comments>      
             </div>
         </div>
             

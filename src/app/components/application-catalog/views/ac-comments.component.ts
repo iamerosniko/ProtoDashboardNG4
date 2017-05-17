@@ -7,4 +7,5 @@ import { Comment } from '../../../entities/comment';
 })
 export class ACCommentsComponent  { 
    @Input() thiscomment:Comment;
+   @Input() thisIndex:number;
 }

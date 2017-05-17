@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var comment_1 = require("../../../entities/comment");
 var ACCommentsComponent = (function () {
@@ -19,6 +20,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", comment_1.Comment)
 ], ACCommentsComponent.prototype, "thiscomment", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], ACCommentsComponent.prototype, "thisIndex", void 0);
 ACCommentsComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
