@@ -1,4 +1,4 @@
-import { Component,OnInit,Input} from '@angular/core';
+import { Component,OnInit,Input,Output,EventEmitter} from '@angular/core';
 import { Comment } from '../../entities/comment';
 @Component({
   moduleId: module.id,
@@ -8,5 +8,9 @@ import { Comment } from '../../entities/comment';
 export class ACReviewsComponent  { 
   @Input() appID:number;
   @Input() comments:Comment[]=[];
-  
+  @Output() refreshComment = new EventEmitter();
+
+  refresh(){
+    this.refreshComment.emit();
+  }
 }

@@ -14,14 +14,17 @@ var comment_service_1 = require("../../../services/comment.service");
 var ACCreateCommentComponent = (function () {
     function ACCreateCommentComponent(commentService) {
         this.commentService = commentService;
+        this.refreshComment = new core_1.EventEmitter();
         this.comment = new comment_1.Comment(0, this.appid, '', '', new Date(), '');
     }
     ACCreateCommentComponent.prototype.submitComment = function () {
+        var _this = this;
         this.comment.AppID = this.appid;
         this.commentService.postComment(this.comment)
             .then(function () {
             alert('success');
-            //refresh comment from parent
+            _this.refreshComment.emit();
+            _this.closeComment();
         });
     };
     ACCreateCommentComponent.prototype.closeComment = function () {
@@ -33,6 +36,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Number)
 ], ACCreateCommentComponent.prototype, "appid", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ACCreateCommentComponent.prototype, "refreshComment", void 0);
 ACCreateCommentComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

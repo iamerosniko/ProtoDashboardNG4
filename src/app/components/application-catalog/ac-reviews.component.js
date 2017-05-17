@@ -12,7 +12,11 @@ var core_1 = require("@angular/core");
 var ACReviewsComponent = (function () {
     function ACReviewsComponent() {
         this.comments = [];
+        this.refreshComment = new core_1.EventEmitter();
     }
+    ACReviewsComponent.prototype.refresh = function () {
+        this.refreshComment.emit();
+    };
     return ACReviewsComponent;
 }());
 __decorate([
@@ -23,6 +27,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Array)
 ], ACReviewsComponent.prototype, "comments", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ACReviewsComponent.prototype, "refreshComment", void 0);
 ACReviewsComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
