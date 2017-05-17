@@ -9,13 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var comment_service_1 = require("../../services/comment.service");
 var ACReviewsComponent = (function () {
-    function ACReviewsComponent() {
+    function ACReviewsComponent(commentService) {
+        this.commentService = commentService;
         this.comments = [];
-        this.refreshComment = new core_1.EventEmitter();
+        this.config = {
+            id: 'advanced',
+            itemsPerPage: 3,
+            currentPage: 1
+        };
     }
-    ACReviewsComponent.prototype.refresh = function () {
-        this.refreshComment.emit();
+    ACReviewsComponent.prototype.refreshMe = function () {
+        var _this = this;
+        this.commentService.getComment(this.appID)
+            .then(function (comments) { return _this.comments = comments; });
+    };
+    ACReviewsComponent.prototype.ngOnInit = function () {
+        this.refreshMe();
     };
     return ACReviewsComponent;
 }());
@@ -23,19 +34,12 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Number)
 ], ACReviewsComponent.prototype, "appID", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Array)
-], ACReviewsComponent.prototype, "comments", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], ACReviewsComponent.prototype, "refreshComment", void 0);
 ACReviewsComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'ac-reviews',
         templateUrl: "ac-reviews.component.html"
-    })
+    }),
+    __metadata("design:paramtypes", [comment_service_1.CommentService])
 ], ACReviewsComponent);
 exports.ACReviewsComponent = ACReviewsComponent;

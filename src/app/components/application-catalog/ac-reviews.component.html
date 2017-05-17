@@ -59,12 +59,46 @@
             <div class="col-md-12">
                 <a href="#" class="btn btn-default btn-md pull-right" data-toggle="modal" data-target="#modalWriteComment">Write your review&nbsp;<span class="glyphicon glyphicon-edit"></span></a>
                 <div id="modalWriteComment" class="modal fade" role="dialog">
-                    <ac-createcomment [appid]="appID" (refreshComment)="refresh()"></ac-createcomment>
+                    <ac-createcomment [appid]="appID" (refreshComment)="refreshMe()"></ac-createcomment>
                 </div>
             </div>
         </div>
         <br />
         <!--Review section-->
-        <ac-comments [comments]="comments"></ac-comments> 
+        <div class="row">  
+            <div class="panel-group" *ngFor="let mycomment of comments">  
+                <!--<ac-comments [thiscomment]="mycomment"></ac-comments>      -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="bs-callout bs-callout-primary">
+                            <h4>{{mycomment.Subject}}</h4>
+                            <blockquote>
+                                <p>
+                                    {{mycomment.Comment}}
+                                </p>
+                                <small>
+                                    {{mycomment.UserName}}, {{mycomment.DatePosted | date:'medium'}}
+                                    <!--Peter Mead, March 1, 2017 11:00 P.M.-->
+                                </small>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            
+            
+        <!--Pagination-->
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous"><a (click)="gotoPage(-1)"><span aria-hidden="true">&larr;</span> Newer</a></li>
+                        <li class="next"><a (click)="gotoPage(1)">Older <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 </div>
