@@ -55,10 +55,9 @@
                             <div *ngIf="false" class="btn btn-circle btn-success btn-xs">
                                 <span class="glyphicon glyphicon-ok"></span>
                             </div>
-                            <!--<fieldset class="favorite" *ngIf="app.canProd==1">-->
-                            <!--<fieldset class="favorite" [name]="app.AppID" >-->
-                                <input [(ngModel)]="app.myFav" (change)="myFav(app)" [name]="app.AppID"  type="checkbox" id="star1" /><label for="star1" title="Mark as Favorite">1 star</label>
-                            <!--</fieldset>-->
+                            <fieldset class="favorite" >
+                                <input (change)="myFav(app)" [(ngModel)]="app.myFav" [id]="app.AppID" type="checkbox" /><label [for]="app.AppID" title="Mark as Favorite">1 star</label>
+                            </fieldset>
                         </td>
                         <td>{{app.AppName}}</td>
                         <td>{{app.BUName}}</td>
