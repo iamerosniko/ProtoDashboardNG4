@@ -48,6 +48,8 @@ var ACRatingsComponent = (function () {
             .then(function () {
             _this.getRating();
             _this.getAverage();
+        }).catch(function () {
+            console.log("update");
         });
     };
     ACRatingsComponent.prototype.getFeed = function () {
