@@ -7,12 +7,17 @@ import { GetAuthService } from '../../../services/getauth.service';
   selector: 'ac-comments',
   templateUrl:`ac-comments.component.html`
 })
-export class ACCommentsComponent  { 
-   @Input() thiscomment:Comment;
+export class ACCommentsComponent implements OnInit  { 
+   @Input() thiscomment:Comment=new Comment(0,0,'','',new Date(),'');
    @Input() thisIndex:number;
    fullname:string='';
    constructor(private ga:GetAuthService){
-      this.getFullName(this.thiscomment.UserName)
+      
+   }
+
+   ngOnInit(){
+     console.log(this.thiscomment);
+     this.getFullName(this.thiscomment.UserName);
    }
 
    getFullName(username:string){

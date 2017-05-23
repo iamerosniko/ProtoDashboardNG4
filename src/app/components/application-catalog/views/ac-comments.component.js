@@ -15,9 +15,12 @@ var getauth_service_1 = require("../../../services/getauth.service");
 var ACCommentsComponent = (function () {
     function ACCommentsComponent(ga) {
         this.ga = ga;
+        this.thiscomment = new comment_1.Comment(0, 0, '', '', new Date(), '');
         this.fullname = '';
-        this.getFullName(this.thiscomment.UserName);
     }
+    ACCommentsComponent.prototype.ngOnInit = function () {
+        this.getFullName(this.thiscomment.UserName);
+    };
     ACCommentsComponent.prototype.getFullName = function (username) {
         var _this = this;
         this.ga.getFullName(username)
