@@ -11,9 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var comment_1 = require("../../../entities/comment");
+var getauth_service_1 = require("../../../services/getauth.service");
 var ACCommentsComponent = (function () {
-    function ACCommentsComponent() {
+    function ACCommentsComponent(ga) {
+        this.ga = ga;
+        this.fullname = '';
+        this.getFullName(this.thiscomment.UserName);
     }
+    ACCommentsComponent.prototype.getFullName = function (username) {
+        var _this = this;
+        this.ga.getFullName(username)
+            .then(function (t) { return _this.fullname = t.FullName; });
+    };
     return ACCommentsComponent;
 }());
 __decorate([
@@ -29,6 +38,7 @@ ACCommentsComponent = __decorate([
         moduleId: module.id,
         selector: 'ac-comments',
         templateUrl: "ac-comments.component.html"
-    })
+    }),
+    __metadata("design:paramtypes", [getauth_service_1.GetAuthService])
 ], ACCommentsComponent);
 exports.ACCommentsComponent = ACCommentsComponent;
