@@ -29,8 +29,10 @@
       'ng2-datetime-picker': 'npm:ng2-datetime-picker/dist',
       //kekeh datepicker
       'mydatepicker': 'npm:mydatepicker/bundles/mydatepicker.umd.min.js',
-      //ngx-bootstrap 
+      //ngx-bootstrap
       'ngx-bootstrap':'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
+      //spinner
+      'ng2-component-spinner': 'node_modules/ng2-component-spinner/dist',
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
@@ -51,6 +53,10 @@
       'ng2-datetime-picker': {
           main: 'ng2-datetime-picker.umd.js',
           defaultExtension: 'js'
+      },
+      'ng2-component-spinner' : {
+        defaultExtension : 'js',
+        main : 'index.js'
       }
     }
   });
