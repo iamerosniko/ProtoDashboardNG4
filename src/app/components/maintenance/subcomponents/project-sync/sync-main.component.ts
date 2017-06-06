@@ -34,7 +34,7 @@ export class SyncMainComponent implements OnInit  {
     }
     //wait page
     viewLoading(){
-      this.mainView.showLoad=!this.mainView.showLoad;
+      this.mainView.viewLoading();
     }
     //pagination
     public config1: PaginationInstance = {

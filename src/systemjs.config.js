@@ -54,6 +54,10 @@
           main: 'ng2-datetime-picker.umd.js',
           defaultExtension: 'js'
       },
+      'ngx-bootstrap':{
+        main: '../index.js',
+        defaultExtension: 'js'
+      }
       // 'ng2-component-spinner' : {
       //   defaultExtension : 'js',
       //   main : 'index.js'

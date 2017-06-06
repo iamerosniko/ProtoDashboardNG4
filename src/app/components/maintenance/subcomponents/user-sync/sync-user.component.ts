@@ -37,7 +37,7 @@ export class SyncUserComponent implements OnInit  {
     }
 
     viewLoading(){
-      this.mainView.showLoad=!this.mainView.showLoad;
+      this.mainView.viewLoading();
     }
 
     checkifComplete():void{
