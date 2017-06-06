@@ -48,13 +48,14 @@ export class MaintenanceComponent {
         this.selectedForm=selectList;
     }
     viewLoading(){
-      if(this.showLoad){
+      this.showLoad=!this.showLoad;
+      if(this.showLoad==true){
         this.childModal.show();
+        console.log('ok');
       }
       else{
         this.childModal.hide();
       }
-      this.showLoad=!this.showLoad;
     }
     applicationView(path:string){
         //[routerLink]="['/Maintenance', {outlets: {'apps': ['Lists']}}]"

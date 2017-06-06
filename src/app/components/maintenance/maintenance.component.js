@@ -50,13 +50,14 @@ var MaintenanceComponent = (function () {
         this.selectedForm = selectList;
     };
     MaintenanceComponent.prototype.viewLoading = function () {
-        if (this.showLoad) {
+        this.showLoad = !this.showLoad;
+        if (this.showLoad == true) {
             this.childModal.show();
+            console.log('ok');
         }
         else {
             this.childModal.hide();
         }
-        this.showLoad = !this.showLoad;
     };
     MaintenanceComponent.prototype.applicationView = function (path) {
         //[routerLink]="['/Maintenance', {outlets: {'apps': ['Lists']}}]"
