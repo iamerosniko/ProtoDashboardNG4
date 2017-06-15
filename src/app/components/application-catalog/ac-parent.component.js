@@ -59,7 +59,6 @@ var ACComponent = (function () {
             _this.apps = apps;
             _this.sliceToFour();
         });
-        console.log('getMyAvailApps');
     };
     //favorites
     ACComponent.prototype.getMyFavApps = function (appName) {

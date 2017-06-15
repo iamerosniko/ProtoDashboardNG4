@@ -58,7 +58,6 @@ export class ACComponent implements OnInit {
           this.sliceToFour();
       });
 
-      console.log('getMyAvailApps');
   }
   //favorites
   getMyFavApps(appName:string){
