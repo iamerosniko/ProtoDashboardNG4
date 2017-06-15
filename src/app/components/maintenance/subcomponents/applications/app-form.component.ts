@@ -19,7 +19,7 @@ import { FnContact } from '../../functions/fn-contact';
     selector: 'app-form',
     templateUrl: 'app-form.component.html',
 })
-export class AppFormComponent implements OnInit  { 
+export class AppFormComponent implements OnInit  {
     formMode:string= 'New';
     dropDownBU:BU[]=[];
     dropDownContact1:Contact[]=[];
@@ -56,18 +56,18 @@ export class AppFormComponent implements OnInit  {
            this.fnMainApp.getApp(params.id)
             .then(app => {
                 this.selectedApp=app;
-                this.formMode = this.selectedApp.AppID==0 
-                    ? 'New' : 'Update'; 
+                this.formMode = this.selectedApp.AppID==0
+                    ? 'New' : 'Update';
             });
-            
+
             this.fnMainApp.getFeatures(params.id).then(
-               features => this.features = features 
+               features => this.features = features
             );
         });
         this.getDropdownBU();
         this.getDropdownContact1();
         this.getDropdownContact2();
-        
+
     }
 
     getDropdownBU(){
@@ -82,7 +82,7 @@ export class AppFormComponent implements OnInit  {
             .then(contacts => {
                 this.dropDownContact1 = contacts;
             });
-            
+
         this.dropDownContact2.push(new Contact(null,'---None---','',''));
     }
 
@@ -101,15 +101,15 @@ export class AppFormComponent implements OnInit  {
 
     checkState():boolean{
         var myState=(
-            this.selectedApp.AppName.trim().length == 0  || 
+            this.selectedApp.AppName.trim().length == 0  ||
             this.selectedApp.AppBU == 0 ||
-            this.selectedApp.FrontTechnology.trim().length == 0  || 
-            this.selectedApp.BackTechnology.trim().length == 0  || 
-            this.selectedApp.PrimaryBUContact == 0 
-            //|| this.selectedApp.AppSecurity.trim().length == 0 
+            this.selectedApp.FrontTechnology.trim().length == 0  ||
+            this.selectedApp.BackTechnology.trim().length == 0  ||
+            this.selectedApp.PrimaryBUContact == 0
+            //|| this.selectedApp.AppSecurity.trim().length == 0
             || this.selectedApp.ProjectDevID.trim().length == 0
-            || this.selectedApp.ProjectModID.trim().length == 0 
-            || this.selectedApp.ProjectOpsID.trim().length == 0 
+            || this.selectedApp.ProjectModID.trim().length == 0
+            || this.selectedApp.ProjectOpsID.trim().length == 0
         );
         //console.log(myState);
         return myState || this.saving;
@@ -121,7 +121,7 @@ export class AppFormComponent implements OnInit  {
             if(this.features.length>0)
                 this.fnMainApp.submitFeatures(this.features)
                 .then(()=>{
-                   
+
                 })
                 .catch(()=>{
                     console.log('problem in adding features');
@@ -137,7 +137,7 @@ export class AppFormComponent implements OnInit  {
     addFeature(){
         this.features.push(new Feature(0,this.selectedApp.AppID,'','',''));
     }
-    
+
     browseFile(name:string):string {
         document.getElementById(name).click();
         return (<HTMLInputElement> document.getElementById(name)).value;

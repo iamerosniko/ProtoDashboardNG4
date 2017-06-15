@@ -20,6 +20,7 @@ export class Application {
         public ProjectDevID : string,
         public ProjectModID : string,
         public ProjectOpsID : string,
-        public IsUatAvail : boolean
+        public IsFGUatAvail : boolean,
+        public AppIconPath?:string
     ){}
 }
