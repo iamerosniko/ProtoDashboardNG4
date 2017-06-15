@@ -11,7 +11,7 @@ import { Comment } from '../../entities/comment';
   selector: 'ac-viewdetail',
   templateUrl:`ac-viewdetail.component.html`
 })
-export class ACDetail implements OnInit { 
+export class ACDetail implements OnInit {
   selectedID:number=0;
   comments:Comment[]=[];
   app:AppForClient=new AppForClient(0,'',0,'','',0,0,0,false,
@@ -31,7 +31,7 @@ export class ACDetail implements OnInit {
   }
   getselectedID(){
     this.route.params.subscribe(params => {
-        this.selectedID = params['id'];});    
+        this.selectedID = params['id'];});
   }
   getDetail(){
     this.fnMainApp.getAppDetail(this.selectedID)
@@ -53,5 +53,8 @@ export class ACDetail implements OnInit {
   getComments(){
     this.commentService.getComment(this.selectedID)
       .then(comments=>this.comments=comments);
+  }
+  getFile():string{
+    return this.app.AppIconPath.length==0||this.app.AppIconPath==null ? "images/AppLogo.png ": this.app.AppIconPath;
   }
 }

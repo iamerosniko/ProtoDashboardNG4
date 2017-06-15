@@ -27,6 +27,7 @@ export class AppForClient {
         public IsUatAvail : boolean,
         public canMod : number,
         public canProd :number,
-        public myFav: boolean
+        public myFav: boolean,
+        public AppIconPath ?: string
     ){}
 }
