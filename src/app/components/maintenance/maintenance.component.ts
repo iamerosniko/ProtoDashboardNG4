@@ -51,7 +51,6 @@ export class MaintenanceComponent {
       this.showLoad=!this.showLoad;
       if(this.showLoad==true){
         this.childModal.show();
-        console.log('ok');
       }
       else{
         this.childModal.hide();

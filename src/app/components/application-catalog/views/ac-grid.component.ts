@@ -10,12 +10,12 @@ import { GetAuth } from '../../../entities/getauth';
   selector: 'ac-grid',
   templateUrl:`ac-grid.component.html`
 })
-export class ACGridComponent  { 
+export class ACGridComponent  {
   @Input() listApps:AppForClient[][]=[];
   @Input() thisParent:ACComponent;
   @Input() auth:GetAuth;
- 
+
   refresh(){
-    this.thisParent.refresh();
+    this.thisParent.refresh(this.thisParent.tabselected);
   }
 }

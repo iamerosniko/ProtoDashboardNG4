@@ -4,20 +4,20 @@ import { FnMainApp } from '../maintenance/functions/fn-main-app';
 import { PaginationInstance } from 'ngx-pagination';
 import { GetAuthService } from '../../services/getauth.service';
 import { GetAuth } from '../../entities/getauth';
-
+import {Observable} from 'rxjs/Observable';
 @Component({
   moduleId: module.id,
   selector: 'my-app',
   templateUrl:`ac-parent.component.html`
 })
-export class ACComponent implements OnInit { 
+export class ACComponent implements OnInit {
   public searchApp='';
   viewtype:number=0;
   tabselected:number=0;
   apps:AppForClient[]=[];
   listApps:AppForClient[][]=[];
   myAuth:GetAuth=new GetAuth('','',false,false,false,false,'');
-  
+  private data: Observable<Array<number>>;
   constructor(
       private fn: FnMainApp,
       private getAuthService:GetAuthService
@@ -25,46 +25,59 @@ export class ACComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.getAllApps(this.searchApp);
+    this.data = new Observable(() => {
+      this.getMyAvailApps(this.searchApp);
+      setTimeout(() => {
+        if(this.apps.length==0){
+          this.getAllApps(this.searchApp);
+        }
+      }, 500);
+
+    });
+    this.data.subscribe();
     this.getAuthService.getAuth().then(auth => this.myAuth=auth);
   }
   //all biztech apps
   getAllApps(appName:string){
+    this.tabselected=0;
     this.apps=[];
     this.fn.getAppsClient(appName)
       .then(apps=>{
           this.apps=apps;
           this.sliceToFour();
       });
-      this.tabselected=0;
   }
   //my available app
   getMyAvailApps(appName:string){
+
+    this.tabselected=1;
     this.apps=[];
     this.fn.getAvailAppsClient(appName)
       .then(apps=>{
           this.apps=apps;
           this.sliceToFour();
       });
-      this.tabselected=1
+
+      console.log('getMyAvailApps');
   }
   //favorites
   getMyFavApps(appName:string){
+    this.tabselected=2;
     this.apps=[];
     this.fn.getFavAppsClient(appName)
       .then(apps=>{
           this.apps=apps;
           this.sliceToFour();
       });
-      this.tabselected=2;
   }
 
-  refresh(){
+  refresh(selection:number){
+    this.tabselected=selection;
     if(this.tabselected==0)
       this.getAllApps(this.searchApp);
     else if(this.tabselected==1)
       this.getMyAvailApps(this.searchApp);
-    else 
+    else
       this.getMyFavApps(this.searchApp);
   }
 
