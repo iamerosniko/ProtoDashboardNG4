@@ -6,6 +6,7 @@ import { FnMainApp } from '../maintenance/functions/fn-main-app';
 import { AppForClient } from '../../entities/appforclient';
 import { CommentService } from '../../services/comment.service';
 import { Comment } from '../../entities/comment';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   moduleId: module.id,
   selector: 'ac-viewdetail',
@@ -22,7 +23,8 @@ export class ACDetail implements OnInit {
     private fnMainApp : FnMainApp,
     private router: Router,
     private commentService:CommentService,
-    private favService:FavoriteService
+    private favService:FavoriteService,
+    public sanitizer: DomSanitizer
   ){ }
   ngOnInit(){
     this.getselectedID();
@@ -55,6 +57,9 @@ export class ACDetail implements OnInit {
       .then(comments=>this.comments=comments);
   }
   getFile():string{
-    return this.app.AppIconPath.length==0||this.app.AppIconPath==null ? "images/AppLogo.png ": this.app.AppIconPath;
+    if(this.app.AppIconPath==null)
+      return "images/AppLogo.png";
+
+    return this.app.AppIconPath.length==0 ? "images/AppLogo.png ": this.app.AppIconPath;
   }
 }
