@@ -31,7 +31,7 @@ export class ACComponent implements OnInit {
         if(this.apps.length==0){
           this.getAllApps(this.searchApp);
         }
-      }, 500);
+      }, 1000);
 
     });
     this.data.subscribe();
