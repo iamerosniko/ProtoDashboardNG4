@@ -22,6 +22,7 @@ export class MaintenanceComponent {
         private router: Router,
         private getAuthService:GetAuthService,
     ){
+        this.applicationView('Lists');
         this.isUserAdmin();
         this.refreshLists();
     }
@@ -38,7 +39,7 @@ export class MaintenanceComponent {
     //main
     showForm:boolean=false;
     formMode:string= 'New';
-    selectedForm:number=0;
+    selectedForm:number=4;
     toFormView(mode:string,form:boolean,selectList:number){
         this.formMode=mode;
         this.showForm=form;

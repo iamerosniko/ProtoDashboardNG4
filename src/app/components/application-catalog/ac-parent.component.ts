@@ -5,6 +5,7 @@ import { PaginationInstance } from 'ngx-pagination';
 import { GetAuthService } from '../../services/getauth.service';
 import { GetAuth } from '../../entities/getauth';
 import {Observable} from 'rxjs/Observable';
+import { Router }  from '@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'my-app',
@@ -20,7 +21,8 @@ export class ACComponent implements OnInit {
   private data: Observable<Array<number>>;
   constructor(
       private fn: FnMainApp,
-      private getAuthService:GetAuthService
+      private getAuthService:GetAuthService,
+      private router:Router
   ){
   }
 
@@ -37,6 +39,11 @@ export class ACComponent implements OnInit {
     this.data.subscribe();
     this.getAuthService.getAuth().then(auth => this.myAuth=auth);
   }
+  //gotomaintenance
+  maintenanceView(){
+      //[routerLink]="['/Maintenance', {outlets: {'apps': ['Lists']}}]"
+      this.router.navigate(['/Maintenance', {outlets: {'apps': ['Lists']}}]);
+  }
   //all biztech apps
   getAllApps(appName:string){
     this.tabselected=0;
@@ -49,7 +56,6 @@ export class ACComponent implements OnInit {
   }
   //my available app
   getMyAvailApps(appName:string){
-
     this.tabselected=1;
     this.apps=[];
     this.fn.getAvailAppsClient(appName)
@@ -57,7 +63,6 @@ export class ACComponent implements OnInit {
           this.apps=apps;
           this.sliceToFour();
       });
-
   }
   //favorites
   getMyFavApps(appName:string){
